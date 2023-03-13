@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34559095-b9fb-4517-aad4-17e966403188" name="Changes" comment="project structure">
-      <change afterPath="$PROJECT_DIR$/dubbo_consumer/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dubbo_consumer/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dubbo_consumer/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dubbo_consumer/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dubbo_consumer/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dubbo_consumer/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dubbo_consumer/src/main/java/com/lxc/dubbo_consumer/DubboConsumerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dubbo_consumer/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dubbo_consumer/src/test/java/com/lxc/dubbo_consumer/DubboConsumerApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +41,10 @@
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "MavenSettings"
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
 }]]></component>
   <component name="RunManager" selected="Spring Boot.DubboProviderApplication">
@@ -75,7 +71,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1678695412365</updated>
-      <workItem from="1678695414307" duration="2250000" />
+      <workItem from="1678695414307" duration="2889000" />
     </task>
     <task id="LOCAL-00001" summary="11">
       <created>1678695876407</created>
@@ -91,7 +87,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678698068566</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="project structure">
+      <created>1678698118477</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678698118477</updated>
+    </task>
+    <task id="LOCAL-00004" summary="project structure">
+      <created>1678698358574</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678698358574</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,13 +112,29 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/dubbo_consumer" />
+      <path value="$PROJECT_DIR$/dubbo_provider" />
+    </ignored-roots>
     <MESSAGE value="11" />
     <MESSAGE value="project structure" />
     <option name="LAST_COMMIT_MESSAGE" value="project structure" />
