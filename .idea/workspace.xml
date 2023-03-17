@@ -5,14 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34559095-b9fb-4517-aad4-17e966403188" name="Changes" comment="project structure">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dubbo-core/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dubbo-core/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/annotaion/FrankDubbo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/domain/Invocation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/processor/post.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/register/LocalCache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dubbo-core/src/test/java/com/lxc/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dubbo_consumer/src/main/java/com/lxc/dubbo_consumer/service/TestHelloService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dubbo_provider/src/main/java/com/lxc/dubbo_provider/controller/DubboController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dubbo_provider/src/main/java/com/lxc/dubbo_provider/impl/HelloServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/src/main/java/com/lxc/interfaces/HelloService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/src/test/java/com/lxc/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo_consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo_consumer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo_consumer/src/main/java/com/lxc/dubbo_consumer/DubboConsumerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo_consumer/src/main/java/com/lxc/dubbo_consumer/DubboConsumerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo_provider/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo_provider/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo_provider/src/main/java/com/lxc/dubbo_provider/DubboProviderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo_provider/src/main/java/com/lxc/dubbo_provider/DubboProviderApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo_provider/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo_provider/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -24,6 +51,7 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHome" value="$USER_HOME$/Java/apache-maven-3.6.3" />
+        <option name="useMavenConfig" value="true" />
         <option name="userSettingsFile" value="$USER_HOME$/Java/apache-maven-3.6.3/conf/settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -34,20 +62,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.ignored.files&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;b9591f7b5d294f9756e08e6f95bf29b2&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Spring Boot.DubboProviderApplication">
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.lxc.protocol" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.DubboConsumerApplication">
     <configuration name="DubboConsumerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="dubbo_consumer" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.lxc.dubbo_consumer.DubboConsumerApplication" />
@@ -71,7 +109,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1678695412365</updated>
-      <workItem from="1678695414307" duration="2889000" />
+      <workItem from="1678695414307" duration="3176000" />
+      <workItem from="1678845937698" duration="726000" />
+      <workItem from="1678936172490" duration="6444000" />
     </task>
     <task id="LOCAL-00001" summary="11">
       <created>1678695876407</created>
@@ -101,7 +141,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678698358574</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="project structure">
+      <created>1678698754869</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678698754869</updated>
+    </task>
+    <task id="LOCAL-00006" summary="project structure">
+      <created>1678698862933</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1678698862933</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,5 +192,9 @@
     <MESSAGE value="11" />
     <MESSAGE value="project structure" />
     <option name="LAST_COMMIT_MESSAGE" value="project structure" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
