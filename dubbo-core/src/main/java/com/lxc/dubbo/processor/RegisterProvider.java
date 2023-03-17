@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import java.util.Arrays;
 
 @Component
-public class post implements BeanPostProcessor {
+public class RegisterProvider implements BeanPostProcessor {
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
         Class<?> beanClass = bean.getClass();

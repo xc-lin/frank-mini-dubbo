@@ -15,4 +15,10 @@ public class Test {
     public void test(){
         testHelloService.test();
     }
+
+
+    @GetMapping("/test2")
+    public void test2(){
+        testHelloService.testUserInfo();
+    }
 }
