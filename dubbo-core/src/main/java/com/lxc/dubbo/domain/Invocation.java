@@ -1,4 +1,4 @@
-package com.lxc.domain;
+package com.lxc.dubbo.domain;
 
 import lombok.Data;
 

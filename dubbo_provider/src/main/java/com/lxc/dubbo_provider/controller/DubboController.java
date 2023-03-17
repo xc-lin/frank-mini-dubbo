@@ -2,10 +2,9 @@ package com.lxc.dubbo_provider.controller;
 
 
 import com.alibaba.fastjson.JSON;
-import com.lxc.domain.Invocation;
-import com.lxc.register.LocalCache;
+import com.lxc.dubbo.domain.Invocation;
+import com.lxc.dubbo.register.LocalCache;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.cglib.core.Local;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

@@ -10,8 +10,6 @@ public class DubboConsumerApplication {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext applicationContext = SpringApplication.run(DubboConsumerApplication.class, args);
-        TestHelloService bean = applicationContext.getBean(TestHelloService.class);
-        bean.test();
     }
 
 }
