@@ -4,6 +4,7 @@ import cn.hutool.http.HttpUtil;
 import com.alibaba.fastjson.JSON;
 import com.lxc.dubbo.annotaion.FrankDubboReference;
 import com.lxc.dubbo.domain.Invocation;
+import com.lxc.dubbo.domain.constants.UrlConstants;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.stereotype.Component;
@@ -39,8 +40,8 @@ public class RegisterConsumer implements BeanPostProcessor {
             @Override
             public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
                 Invocation invocation = new Invocation(interfaceClass.getName(), method.getName(), args, method.getParameterTypes());
-                String result = HttpUtil.post("127.0.0.1:8081/frankDubbo1998-01-20", JSON.toJSONString(invocation));
-                if (method.getReturnType()== String.class){
+                String result = HttpUtil.post("127.0.0.1:8081" + UrlConstants.RPC_URL, JSON.toJSONString(invocation));
+                if (method.getReturnType() == String.class) {
                     return result;
                 }
                 return JSON.parseObject(result, method.getReturnType());

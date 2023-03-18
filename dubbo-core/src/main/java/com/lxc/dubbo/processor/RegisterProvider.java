@@ -13,9 +13,12 @@ public class RegisterProvider implements BeanPostProcessor {
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
         Class<?> beanClass = bean.getClass();
-        if (beanClass.isAnnotationPresent(FrankDubbo.class)){
+        if (beanClass.isAnnotationPresent(FrankDubbo.class)) {
             Class<?>[] interfaces = beanClass.getInterfaces();
-            Arrays.stream(interfaces).forEach(i -> LocalCache.register(i.getName(), beanClass));
+            Arrays.stream(interfaces).forEach(i -> {
+                LocalCache.register(i.getName(), beanClass);
+
+            });
         }
         return bean;
     }

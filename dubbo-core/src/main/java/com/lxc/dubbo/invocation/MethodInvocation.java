@@ -2,6 +2,7 @@ package com.lxc.dubbo.invocation;
 
 import com.alibaba.fastjson.JSON;
 import com.lxc.dubbo.domain.Invocation;
+import com.lxc.dubbo.domain.constants.UrlConstants;
 import com.lxc.dubbo.register.LocalCache;
 import com.lxc.dubbo.util.ApplicationContextUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class MethodInvocation {
 
-    @PostMapping("/frankDubbo1998-01-20")
+    @PostMapping(UrlConstants.RPC_URL)
     public Object dubbo(@RequestBody Invocation invocation) throws Exception {
         Class clazz = LocalCache.get(invocation.getInterfaceName());
         log.info("执行{}.{}",invocation.getInterfaceName(),invocation.getMethodName());

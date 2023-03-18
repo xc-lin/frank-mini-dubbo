@@ -5,16 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34559095-b9fb-4517-aad4-17e966403188" name="Changes" comment="增加frankDubboReference注解，自动注入实现类">
-      <change afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/config/ThreadPoolConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/domain/enums/HealthEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/invocation/HealthResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/invocation/MethodInvocation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/util/ApplicationContextUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dubbo-core/src/main/resources/META-INF/spring.factories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/domain/constants/UrlConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dubbo-registry/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/healthHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dubbo-registry/src/test/java/com/lxc/AppTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/config/ThreadPoolConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/config/ThreadPoolConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/invocation/HealthResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/invocation/HealthResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/invocation/MethodInvocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/invocation/MethodInvocation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/processor/RegisterConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/processor/RegisterConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo_consumer/src/main/java/com/lxc/dubbo_consumer/config/FrankDubboConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/config/FrankDubboConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo_provider/src/main/java/com/lxc/dubbo_provider/config/FrankDubboConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/processor/RegisterProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/processor/RegisterProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo_consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo_consumer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo_provider/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo_provider/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +29,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -100,7 +104,7 @@
       <updated>1678695412365</updated>
       <workItem from="1678695414307" duration="3176000" />
       <workItem from="1678845937698" duration="726000" />
-      <workItem from="1678936172490" duration="15719000" />
+      <workItem from="1678936172490" duration="19247000" />
     </task>
     <task id="LOCAL-00001" summary="11">
       <created>1678695876407</created>
@@ -172,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679040229816</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="增加frankDubboReference注解，自动注入实现类">
+      <created>1679114895811</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1679114895811</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,24 +228,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/dubbo_provider/src/main/java/com/lxc/dubbo_provider/controller/DubboController.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/dubbo_provider/src/main/java/com/lxc/dubbo_provider/controller/DubboController.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/processor/RegisterConsumer.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/invocation/MethodInvocation.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="28" />
+          <url>file://$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/healthHandler.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

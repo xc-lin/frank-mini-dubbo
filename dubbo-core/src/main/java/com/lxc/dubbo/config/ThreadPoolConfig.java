@@ -10,8 +10,7 @@ import java.util.concurrent.*;
 public class ThreadPoolConfig {
 
     @Bean
-    public ThreadPoolExecutor threadPoolExecutor(){
-        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(6, 10, 60, TimeUnit.SECONDS, new ArrayBlockingQueue<>(10), new ThreadPoolExecutor.CallerRunsPolicy());
-        return threadPoolExecutor;
+    public ScheduledExecutorService threadPoolExecutor(){
+        return Executors.newScheduledThreadPool(6);
     }
 }

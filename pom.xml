@@ -19,6 +19,7 @@
         <module>dubbo_consumer</module>
         <module>interface</module>
         <module>dubbo-core</module>
+        <module>dubbo-registry</module>
     </modules>
 
     <properties>
