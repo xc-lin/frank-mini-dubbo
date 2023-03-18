@@ -1,4 +1,4 @@
-package com.lxc.dubbo_provider.config;
+package com.lxc.dubbo.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

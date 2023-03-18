@@ -39,7 +39,7 @@ public class RegisterConsumer implements BeanPostProcessor {
             @Override
             public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
                 Invocation invocation = new Invocation(interfaceClass.getName(), method.getName(), args, method.getParameterTypes());
-                String result = HttpUtil.post("127.0.0.1:8081/dubbo", JSON.toJSONString(invocation));
+                String result = HttpUtil.post("127.0.0.1:8081/frankDubbo1998-01-20", JSON.toJSONString(invocation));
                 if (method.getReturnType()== String.class){
                     return result;
                 }
