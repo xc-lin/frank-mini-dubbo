@@ -1,4 +1,4 @@
-package com.lxc.dubbo.processor;
+package com.lxc.dubbo.registry.processor;
 
 import cn.hutool.http.HttpUtil;
 import com.alibaba.fastjson.JSON;
