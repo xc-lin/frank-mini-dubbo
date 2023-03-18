@@ -5,7 +5,10 @@ import com.alibaba.fastjson.JSON;
 import com.lxc.dubbo.annotaion.FrankDubboReference;
 import com.lxc.dubbo.domain.Invocation;
 import com.lxc.dubbo.domain.constants.UrlConstants;
+import com.lxc.dubbo.registry.Registry;
+import com.lxc.dubbo.registry.cache.LocalCache;
 import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.stereotype.Component;
 
@@ -18,6 +21,9 @@ import java.util.Arrays;
 @Component
 public class RegisterConsumer implements BeanPostProcessor {
 
+    @Autowired
+    private Registry registry;
+
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
         Class<?> beanClass = bean.getClass();
@@ -27,7 +33,9 @@ public class RegisterConsumer implements BeanPostProcessor {
                 field.setAccessible(true);
                 try {
                     field.set(bean, getProxy(field.getType()));
-                } catch (IllegalAccessException e) {
+                    registry.getUrls(field.getType().getName());
+                    registry.watchInterface(field.getType().getName());
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
