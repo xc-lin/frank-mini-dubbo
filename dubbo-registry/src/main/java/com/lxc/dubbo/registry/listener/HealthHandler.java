@@ -44,7 +44,6 @@ public class HealthHandler implements ApplicationListener<WebServerInitializedEv
             @SneakyThrows
             @Override
             public void run() {
-                System.out.println(JSON.toJSONString(LocalCache.get("com.lxc.interfaces.HelloService")));
 
 //                List<String> interfaceNames = client.getChildren().forPath("/");
 //                for (String interfaceName : interfaceNames) {

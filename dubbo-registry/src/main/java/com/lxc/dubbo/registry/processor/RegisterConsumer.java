@@ -4,9 +4,11 @@ import cn.hutool.http.HttpUtil;
 import com.alibaba.fastjson.JSON;
 import com.lxc.dubbo.annotaion.FrankDubboReference;
 import com.lxc.dubbo.domain.Invocation;
+import com.lxc.dubbo.domain.Url;
 import com.lxc.dubbo.domain.constants.UrlConstants;
 import com.lxc.dubbo.registry.Registry;
 import com.lxc.dubbo.registry.cache.LocalCache;
+import com.lxc.dubbo.registry.loadbalance.LoadBalance;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanPostProcessor;
@@ -17,12 +19,16 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.Arrays;
+import java.util.List;
 
 @Component
 public class RegisterConsumer implements BeanPostProcessor {
 
     @Autowired
     private Registry registry;
+
+    @Autowired
+    private LoadBalance loadBalance;
 
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
@@ -48,7 +54,9 @@ public class RegisterConsumer implements BeanPostProcessor {
             @Override
             public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
                 Invocation invocation = new Invocation(interfaceClass.getName(), method.getName(), args, method.getParameterTypes());
-                String result = HttpUtil.post("127.0.0.1:8081" + UrlConstants.RPC_URL, JSON.toJSONString(invocation));
+                List<Url> urls = LocalCache.get(interfaceClass.getName());
+                Url url = loadBalance.getUrl(urls);
+                String result = HttpUtil.post(url.getAddressAndPort() + UrlConstants.RPC_URL, JSON.toJSONString(invocation));
                 if (method.getReturnType() == String.class) {
                     return result;
                 }

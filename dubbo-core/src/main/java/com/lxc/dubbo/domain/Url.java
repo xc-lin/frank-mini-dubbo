@@ -26,4 +26,8 @@ public class Url {
     public int hashCode() {
         return Objects.hash(host, port);
     }
+
+    public String getAddressAndPort(){
+        return String.format("%s:%s", host, port);
+    }
 }

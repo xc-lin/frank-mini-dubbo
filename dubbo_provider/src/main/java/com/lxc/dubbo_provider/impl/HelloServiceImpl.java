@@ -7,6 +7,7 @@ import com.lxc.interfaces.HelloService;
 public class HelloServiceImpl implements HelloService {
     @Override
     public String sayHello() {
+        System.out.println("hello frank dubbo !!!");
         return "hello frank dubbo !!!";
     }
 
