@@ -5,45 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34559095-b9fb-4517-aad4-17e966403188" name="Changes" comment="增加本地缓存和zookeeper的联动，实现zookeeper的监听">
-      <change afterPath="$PROJECT_DIR$/dubbo-demo/dubbo_consumer/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dubbo-demo/dubbo_consumer/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dubbo-demo/dubbo_provider/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dubbo-demo/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dubbo-domain/src/main/java/com/lxc/dubbo/domain/constants/RegistryConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/loadbalance/impl/RandomLoadBalance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/zookeeper/ConsumerZookeeperRegistry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/zookeeper/ProviderZookeeperRegistry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/config/FrankDubboConfigAutoConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/config/FrankDubboConfigAutoConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/invocation/HealthResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/invocation/HealthResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/invocation/ProviderMethodInvocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/invocation/ProviderMethodInvocation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/ConsumerProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/ConsumerProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-domain/src/main/java/com/lxc/dubbo/domain/constants/UrlConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-domain/src/main/java/com/lxc/dubbo/domain/constants/UrlConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-domain/src/main/java/com/lxc/dubbo/domain/enums/ApiErrCodeExceptionEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-domain/src/main/java/com/lxc/dubbo/domain/enums/ApiErrCodeExceptionEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/Registry.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/Registry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/cache/LocalConsumerCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/cache/LocalConsumerCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/listener/LogOffListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/listener/LogOffListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/processor/RegisterConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/processor/RegisterConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/processor/RegisterProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/processor/RegisterProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/zookeeper/ZookeeperRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/zookeeper/AbstractZookeeperRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo_consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/dubbo_consumer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo_consumer/src/main/java/com/lxc/dubbo_consumer/DubboConsumerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/dubbo_consumer/src/main/java/com/lxc/dubbo_consumer/DubboConsumerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo_consumer/src/main/java/com/lxc/dubbo_consumer/controller/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/dubbo_consumer/src/main/java/com/lxc/dubbo_consumer/controller/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo_consumer/src/main/java/com/lxc/dubbo_consumer/service/TestHelloService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/dubbo_consumer/src/main/java/com/lxc/dubbo_consumer/service/TestHelloService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo_consumer/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo_consumer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/dubbo_provider/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo_consumer/src/test/java/com/lxc/dubbo_consumer/DubboConsumerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/dubbo_consumer/src/test/java/com/lxc/dubbo_consumer/DubboConsumerApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo_provider/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/dubbo_provider/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo_provider/src/main/java/com/lxc/dubbo_provider/DubboProviderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/dubbo_provider/src/main/java/com/lxc/dubbo_provider/DubboProviderApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo_provider/src/main/java/com/lxc/dubbo_provider/impl/HelloServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/dubbo_provider/src/main/java/com/lxc/dubbo_provider/impl/HelloServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo_provider/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-core/src/main/resources/application-frank-mini-dubbo.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo_provider/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo_provider/src/test/java/com/lxc/dubbo_provider/DubboProviderApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/dubbo_provider/src/test/java/com/lxc/dubbo_provider/DubboProviderApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/interface/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/interface/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/src/main/java/com/lxc/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/interface/src/main/java/com/lxc/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/src/main/java/com/lxc/interfaces/HelloService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/interface/src/main/java/com/lxc/interfaces/HelloService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/src/test/java/com/lxc/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/interface/src/test/java/com/lxc/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/advice/responseBodyAdviceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/advice/responseBodyAdviceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-demo/dubbo_provider/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/dubbo_provider/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-domain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-domain/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-registry/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +59,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "/Users/linxianchao3/IdeaProjects/frank-dubbo/dubbo-demo/dubbo_consumer/src/main/resources",
+    "last_opened_file_path": "/Users/linxianchao3/IdeaProjects/frank-mini-dubbo",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
@@ -125,7 +93,20 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.DubboConsumerApplication">
+  <component name="RunManager" selected="Spring Boot.DubboProviderApplication">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="frank-mini-dubbo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="frank-mini-dubbo" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DubboConsumerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
       <option name="ACTIVE_PROFILES" />
       <module name="dubbo_consumer" />
@@ -163,6 +144,7 @@
       <workItem from="1679390525321" duration="2361000" />
       <workItem from="1679708757046" duration="8201000" />
       <workItem from="1679717066527" duration="188000" />
+      <workItem from="1679717538734" duration="725000" />
     </task>
     <task id="LOCAL-00001" summary="11">
       <created>1678695876407</created>
@@ -353,9 +335,14 @@
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/config/ZookeeperConfig.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="59" />
+          <url>file://$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/ConsumerProxy.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/advice/responseBodyAdviceImpl.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="61" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,5 +1,6 @@
 package com.lxc.dubbo.core.advice;
 
+import com.alibaba.fastjson.JSON;
 import com.lxc.dubbo.domain.result.RequestResult;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
@@ -19,8 +20,11 @@ public class responseBodyAdviceImpl implements ResponseBodyAdvice {
 
     @Override
     public Object beforeBodyWrite(Object body, MethodParameter returnType, MediaType selectedContentType, Class selectedConverterType, ServerHttpRequest request, ServerHttpResponse response) {
-        if (Objects.equals(body.getClass(), RequestResult.class) || Objects.equals(body.getClass(),String.class)){
+        if (Objects.equals(body.getClass(), RequestResult.class)){
             return body;
+        }
+        if (body instanceof String){
+            return JSON.toJSONString(RequestResult.buildSuccess(body));
         }
         return RequestResult.buildSuccess(body);
 
