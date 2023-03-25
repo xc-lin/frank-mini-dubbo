@@ -1,12 +1,11 @@
 package com.lxc.dubbo.registry.listener;
 
 import com.lxc.dubbo.domain.Url;
-import com.lxc.dubbo.register.LocalCache;
+import com.lxc.dubbo.registry.cache.LocalProviderCache;
 import com.lxc.dubbo.registry.Registry;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationListener;
-import org.springframework.context.event.ContextClosedEvent;
 import org.springframework.context.event.ContextStoppedEvent;
 import org.springframework.stereotype.Component;
 
@@ -25,7 +24,7 @@ public class LogOffListener implements ApplicationListener<ContextStoppedEvent> 
 
     @Override
     public void onApplicationEvent(ContextStoppedEvent event) {
-        Set<String> allInterfaces = LocalCache.getAllInterfaces();
+        Set<String> allInterfaces = LocalProviderCache.getAllInterfaces();
         String hostAddress = "";
         try {
             hostAddress = InetAddress.getLocalHost().getHostAddress();

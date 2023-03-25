@@ -1,4 +1,4 @@
-package com.lxc.dubbo.annotaion;
+package com.lxc.dubbo.registry.annotaion;
 
 import org.springframework.stereotype.Component;
 
@@ -7,8 +7,8 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Target({ElementType.TYPE, ElementType.METHOD})
+@Target({ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
 @Component
-public @interface FrankDubbo {
+public @interface FrankDubboReference {
 }

@@ -20,6 +20,7 @@
         <module>interface</module>
         <module>dubbo-core</module>
         <module>dubbo-registry</module>
+        <module>dubbo-domain</module>
     </modules>
 
     <properties>

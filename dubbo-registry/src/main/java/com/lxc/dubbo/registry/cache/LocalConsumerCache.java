@@ -6,7 +6,7 @@ import org.springframework.util.MultiValueMap;
 
 import java.util.List;
 
-public class LocalCache {
+public class LocalConsumerCache {
     private static MultiValueMap<String, Url> interfaceUrlCache = new LinkedMultiValueMap<>();
 
     public static void set(String interfaceName, Url url) {

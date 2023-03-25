@@ -3,7 +3,7 @@ package com.lxc.dubbo.registry.zookeeper;
 import com.alibaba.fastjson.JSON;
 import com.lxc.dubbo.domain.Url;
 import com.lxc.dubbo.registry.Registry;
-import com.lxc.dubbo.registry.cache.LocalCache;
+import com.lxc.dubbo.registry.cache.LocalConsumerCache;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.recipes.cache.PathChildrenCache;
@@ -47,7 +47,7 @@ public class ZookeeperRegistry implements Registry {
         List<String> urlJsons = client.getChildren().forPath("/" + interfaceName);
         for (String urlJson : urlJsons) {
             Url url = JSON.parseObject(urlJson, Url.class);
-            LocalCache.set(interfaceName, url);
+            LocalConsumerCache.set(interfaceName, url);
         }
         log.info("接口: {}, url：{}存入本地缓存", interfaceName, urlJsons);
     }
@@ -61,12 +61,12 @@ public class ZookeeperRegistry implements Registry {
                 if (event.getType().equals(PathChildrenCacheEvent.Type.CHILD_ADDED)) {
                     String path = event.getData().getPath();
                     String urlJson = path.replace("/" + interfaceName + "/", "");
-                    LocalCache.set(interfaceName, JSON.parseObject(urlJson, Url.class));
+                    LocalConsumerCache.set(interfaceName, JSON.parseObject(urlJson, Url.class));
                     log.info("接口: {}，增加provider: {}", interfaceName, urlJson);
                 } else if (event.getType().equals(PathChildrenCacheEvent.Type.CHILD_REMOVED)) {
                     String path = event.getData().getPath();
                     String urlJson = path.replace("/" + interfaceName + "/", "");
-                    LocalCache.remove(interfaceName, JSON.parseObject(urlJson, Url.class));
+                    LocalConsumerCache.remove(interfaceName, JSON.parseObject(urlJson, Url.class));
                     log.info("接口: {}，减少provider: {}", interfaceName, urlJson);
                 }
             }

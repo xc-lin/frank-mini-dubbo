@@ -1,9 +1,6 @@
 package com.lxc.dubbo.registry;
 
 import com.lxc.dubbo.domain.Url;
-import org.apache.zookeeper.KeeperException;
-
-import java.util.List;
 
 public interface Registry {
 

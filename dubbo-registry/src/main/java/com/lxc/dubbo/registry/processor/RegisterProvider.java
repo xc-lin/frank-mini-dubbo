@@ -1,11 +1,9 @@
 package com.lxc.dubbo.registry.processor;
 
-import com.lxc.dubbo.annotaion.FrankDubbo;
 import com.lxc.dubbo.domain.Url;
-import com.lxc.dubbo.register.LocalCache;
+import com.lxc.dubbo.registry.annotaion.FrankDubbo;
+import com.lxc.dubbo.registry.cache.LocalProviderCache;
 import com.lxc.dubbo.registry.Registry;
-import org.apache.zookeeper.KeeperException;
-import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.config.BeanPostProcessor;
@@ -30,7 +28,8 @@ public class RegisterProvider implements BeanPostProcessor {
         if (beanClass.isAnnotationPresent(FrankDubbo.class)) {
             Class<?>[] interfaces = beanClass.getInterfaces();
             Arrays.stream(interfaces).forEach(i -> {
-                LocalCache.register(i.getName(), beanClass);
+
+                LocalProviderCache.register(i.getName(), beanClass, beanName);
                 String hostAddress = "";
                 try {
                     hostAddress = InetAddress.getLocalHost().getHostAddress();

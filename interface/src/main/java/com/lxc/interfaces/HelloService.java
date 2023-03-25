@@ -6,4 +6,6 @@ public interface HelloService {
     String sayHello();
 
     User getUserInfo();
+
+    User testVoid();
 }

@@ -1,4 +1,4 @@
-package com.lxc.dubbo.invocation;
+package com.lxc.dubbo.core.invocation;
 
 import com.lxc.dubbo.domain.constants.UrlConstants;
 import com.lxc.dubbo.domain.enums.HealthEnum;

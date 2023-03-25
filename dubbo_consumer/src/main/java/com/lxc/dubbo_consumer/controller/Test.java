@@ -21,4 +21,9 @@ public class Test {
     public void test2(){
         testHelloService.testUserInfo();
     }
+
+    @GetMapping("/test3")
+    public void test3(){
+        testHelloService.testVoid();
+    }
 }
