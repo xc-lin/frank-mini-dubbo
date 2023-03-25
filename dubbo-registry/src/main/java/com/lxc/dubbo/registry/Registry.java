@@ -12,4 +12,5 @@ public interface Registry {
 
     void watchInterface(String interfaceName) throws Exception;
 
+    String getPrefix();
 }

@@ -15,12 +15,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <modules>
-        <module>dubbo_provider</module>
-        <module>dubbo_consumer</module>
-        <module>interface</module>
         <module>dubbo-core</module>
         <module>dubbo-registry</module>
         <module>dubbo-domain</module>
+        <module>dubbo-demo</module>
     </modules>
 
     <properties>

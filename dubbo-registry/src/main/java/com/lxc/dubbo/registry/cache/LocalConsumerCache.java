@@ -5,6 +5,7 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 
 import java.util.List;
+import java.util.Set;
 
 public class LocalConsumerCache {
     private static MultiValueMap<String, Url> interfaceUrlCache = new LinkedMultiValueMap<>();
@@ -20,5 +21,9 @@ public class LocalConsumerCache {
     public static void remove(String interfaceName, Url url) {
         List<Url> urls = get(interfaceName);
         urls.remove(url);
+    }
+
+    public static Set<String> getAllInterfaces() {
+        return interfaceUrlCache.keySet();
     }
 }

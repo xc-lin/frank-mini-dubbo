@@ -5,7 +5,7 @@ import com.lxc.dubbo.domain.Invocation;
 import com.lxc.dubbo.domain.ObjectInfo;
 import com.lxc.dubbo.domain.enums.ApiErrCodeExceptionEnum;
 import com.lxc.dubbo.core.excetion.ApiErrCodeException;
-import com.lxc.dubbo.domain.constants.UrlConstants;
+import com.lxc.dubbo.domain.constants.UrlConstant;
 import com.lxc.dubbo.core.util.ApplicationContextUtil;
 import com.lxc.dubbo.registry.cache.LocalProviderCache;
 import lombok.extern.slf4j.Slf4j;
@@ -20,7 +20,7 @@ import java.util.Objects;
 @Slf4j
 public class ProviderMethodInvocation {
 
-    @PostMapping(UrlConstants.RPC_URL)
+    @PostMapping(UrlConstant.RPC_URL)
     public Object dubbo(@RequestBody Invocation invocation) throws Exception {
         ObjectInfo objectInfo = LocalProviderCache.get(invocation.getInterfaceName());
         if (Objects.isNull(objectInfo)) {

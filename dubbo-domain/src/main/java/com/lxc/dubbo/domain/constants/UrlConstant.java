@@ -1,6 +1,6 @@
 package com.lxc.dubbo.domain.constants;
 
-public class UrlConstants {
+public class UrlConstant {
 
     public static final String HEALTH_URL = "/frankDubbo1998-01-20-health";
 

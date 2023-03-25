@@ -7,6 +7,7 @@ import com.lxc.dubbo.registry.Registry;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.config.BeanPostProcessor;
+import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.stereotype.Component;
 
 import java.net.InetAddress;
@@ -17,7 +18,7 @@ import java.util.Arrays;
 public class RegisterProvider implements BeanPostProcessor {
 
     @Autowired
-    private Registry registry;
+    private Registry providerZookeeperRegistry;
 
     @Value("${server.port}")
     private String port;
@@ -38,7 +39,7 @@ public class RegisterProvider implements BeanPostProcessor {
                 }
 
                 try {
-                    registry.register(i.getName(), new Url(hostAddress, port));
+                    providerZookeeperRegistry.register(i.getName(), new Url(hostAddress, port));
                 } catch (Exception e) {
                     throw new RuntimeException(e);
                 }

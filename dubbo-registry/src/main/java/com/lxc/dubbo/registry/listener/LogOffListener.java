@@ -1,6 +1,7 @@
 package com.lxc.dubbo.registry.listener;
 
 import com.lxc.dubbo.domain.Url;
+import com.lxc.dubbo.registry.cache.LocalConsumerCache;
 import com.lxc.dubbo.registry.cache.LocalProviderCache;
 import com.lxc.dubbo.registry.Registry;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextStoppedEvent;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.Set;
@@ -17,7 +19,10 @@ import java.util.Set;
 public class LogOffListener implements ApplicationListener<ContextStoppedEvent> {
 
     @Autowired
-    private Registry registry;
+    private Registry providerZookeeperRegistry;
+
+    @Autowired
+    private Registry consumerZookeeperRegistry;
 
     @Value("${server.port}")
     private String port;
@@ -35,7 +40,17 @@ public class LogOffListener implements ApplicationListener<ContextStoppedEvent> 
 
         for (String inter : allInterfaces) {
             try {
-                registry.logOff(inter, new Url(hostAddress, port));
+                providerZookeeperRegistry.logOff(inter, new Url(hostAddress, port));
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        Set<String> allConsumerInterfaces = LocalConsumerCache.getAllInterfaces();
+
+        for (String inter : allConsumerInterfaces) {
+            try {
+                consumerZookeeperRegistry.logOff(inter, new Url(hostAddress, port));
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }

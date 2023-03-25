@@ -7,6 +7,8 @@ public enum ApiErrCodeExceptionEnum {
 
     OBJECT_NOT_IN_SPRING(3, "当前bean未在spring中"),
 
+    NO_ALIVE_PROVIDER(4,"没有存活的的提供者");
+
     ;
     private int code;
     private String msg;
