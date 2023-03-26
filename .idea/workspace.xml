@@ -4,47 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34559095-b9fb-4517-aad4-17e966403188" name="Changes" comment="增加本地缓存和zookeeper的联动，实现zookeeper的监听">
-      <change afterPath="$PROJECT_DIR$/dubbo-demo/dubbo_consumer/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dubbo-demo/dubbo_consumer/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dubbo-demo/dubbo_provider/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dubbo-demo/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dubbo-domain/src/main/java/com/lxc/dubbo/domain/constants/RegistryConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/loadbalance/impl/RandomLoadBalance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/zookeeper/ConsumerZookeeperRegistry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/zookeeper/ProviderZookeeperRegistry.java" afterDir="false" />
+    <list default="true" id="34559095-b9fb-4517-aad4-17e966403188" name="Changes" comment="增加注释，修改readme">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/config/FrankDubboConfigAutoConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/config/FrankDubboConfigAutoConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/invocation/HealthResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/invocation/HealthResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/invocation/ProviderMethodInvocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/invocation/ProviderMethodInvocation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/ConsumerProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/ConsumerProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-domain/src/main/java/com/lxc/dubbo/domain/constants/UrlConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-domain/src/main/java/com/lxc/dubbo/domain/constants/UrlConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-domain/src/main/java/com/lxc/dubbo/domain/enums/ApiErrCodeExceptionEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-domain/src/main/java/com/lxc/dubbo/domain/enums/ApiErrCodeExceptionEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/Registry.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/Registry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/cache/LocalConsumerCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/cache/LocalConsumerCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/listener/LogOffListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/listener/LogOffListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/annotaion/FrankDubbo.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/annotaion/FrankDubbo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/annotaion/FrankDubboReference.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/annotaion/FrankDubboReference.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/processor/RegisterConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/processor/RegisterConsumer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/processor/RegisterProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/processor/RegisterProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/zookeeper/ZookeeperRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/zookeeper/AbstractZookeeperRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo_consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/dubbo_consumer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo_consumer/src/main/java/com/lxc/dubbo_consumer/DubboConsumerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/dubbo_consumer/src/main/java/com/lxc/dubbo_consumer/DubboConsumerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo_consumer/src/main/java/com/lxc/dubbo_consumer/controller/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/dubbo_consumer/src/main/java/com/lxc/dubbo_consumer/controller/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo_consumer/src/main/java/com/lxc/dubbo_consumer/service/TestHelloService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/dubbo_consumer/src/main/java/com/lxc/dubbo_consumer/service/TestHelloService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo_consumer/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo_consumer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/dubbo_provider/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo_consumer/src/test/java/com/lxc/dubbo_consumer/DubboConsumerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/dubbo_consumer/src/test/java/com/lxc/dubbo_consumer/DubboConsumerApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo_provider/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/dubbo_provider/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo_provider/src/main/java/com/lxc/dubbo_provider/DubboProviderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/dubbo_provider/src/main/java/com/lxc/dubbo_provider/DubboProviderApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo_provider/src/main/java/com/lxc/dubbo_provider/impl/HelloServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/dubbo_provider/src/main/java/com/lxc/dubbo_provider/impl/HelloServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo_provider/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-core/src/main/resources/application-frank-mini-dubbo.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo_provider/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo_provider/src/test/java/com/lxc/dubbo_provider/DubboProviderApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/dubbo_provider/src/test/java/com/lxc/dubbo_provider/DubboProviderApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/interface/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/interface/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/src/main/java/com/lxc/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/interface/src/main/java/com/lxc/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/src/main/java/com/lxc/interfaces/HelloService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/interface/src/main/java/com/lxc/interfaces/HelloService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/src/test/java/com/lxc/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/interface/src/test/java/com/lxc/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,15 +32,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
   </component>
   <component name="ProjectId" id="2Mx3TEMx6FMrz7P7Uv1hW3eK9zh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -79,65 +49,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelOrder2": "2",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RequestMappingsPanelWidth2": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "/Users/linxianchao3/IdeaProjects/frank-dubbo/dubbo-demo/dubbo_consumer/src/main/resources",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "spring.configuration.checksum": "7b05919be0e8432290f1f2a125e2bf80"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/dubbo-demo/dubbo_consumer/src/main/resources" />
       <recent name="$PROJECT_DIR$/dubbo-core/src/main/resources" />
-      <recent name="$PROJECT_DIR$/dubbo_provider/src/main/resources" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/dubbo-demo" />
-      <recent name="$PROJECT_DIR$/dubbo-domain" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.lxc.dubbo.registry.zookeeper" />
-      <recent name="com.lxc.dubbo.registry.loadbalance.impl" />
       <recent name="com.lxc.dubbo_consumer.config" />
       <recent name="com.lxc.dubbo.annotaion" />
       <recent name="com.lxc.protocol" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="configurationTypes">
-      <set>
-        <option value="SpringBootApplicationConfigurationType" />
-      </set>
-    </option>
-  </component>
-  <component name="RunManager" selected="Spring Boot.DubboConsumerApplication">
-    <configuration name="DubboConsumerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
-      <option name="ACTIVE_PROFILES" />
+  <component name="RunManager" selected="Spring Boot.DubboProviderApplication">
+    <configuration name="DubboConsumerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="dubbo_consumer" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.lxc.dubbo_consumer.DubboConsumerApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DubboProviderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
-      <option name="ACTIVE_PROFILES" />
+    <configuration name="DubboProviderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="dubbo_provider" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.lxc.dubbo_provider.DubboProviderApplication" />
+      <option name="ACTIVE_PROFILES" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -158,11 +94,7 @@
       <workItem from="1678695414307" duration="3176000" />
       <workItem from="1678845937698" duration="726000" />
       <workItem from="1678936172490" duration="19607000" />
-      <workItem from="1679120006901" duration="12155000" />
-      <workItem from="1679153186240" duration="2798000" />
-      <workItem from="1679390525321" duration="2361000" />
-      <workItem from="1679708757046" duration="8201000" />
-      <workItem from="1679717066527" duration="188000" />
+      <workItem from="1679120006901" duration="8052000" />
     </task>
     <task id="LOCAL-00001" summary="11">
       <created>1678695876407</created>
@@ -248,35 +180,7 @@
       <option name="project" value="LOCAL" />
       <updated>1679119706354</updated>
     </task>
-    <task id="LOCAL-00013" summary="dubbo实现">
-      <created>1679129739981</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1679129739981</updated>
-    </task>
-    <task id="LOCAL-00014" summary="增加本地缓存和zookeeper的联动，实现zookeeper的监听">
-      <created>1679154064546</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1679154064546</updated>
-    </task>
-    <task id="LOCAL-00015" summary="增加本地缓存和zookeeper的联动，实现zookeeper的监听">
-      <created>1679201853357</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1679201853357</updated>
-    </task>
-    <task id="LOCAL-00016" summary="增加本地缓存和zookeeper的联动，实现zookeeper的监听">
-      <created>1679713312549</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1679713312549</updated>
-    </task>
-    <option name="localTasksCounter" value="17" />
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,6 +208,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
@@ -315,47 +220,21 @@
     <MESSAGE value="初步方案完成" />
     <MESSAGE value="增加frankDubbo注解，自动注入实现类" />
     <MESSAGE value="增加frankDubboReference注解，自动注入实现类" />
-    <MESSAGE value="dubbo实现" />
-    <MESSAGE value="增加本地缓存和zookeeper的联动，实现zookeeper的监听" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加本地缓存和zookeeper的联动，实现zookeeper的监听" />
+    <MESSAGE value="增加注释，修改readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加注释，修改readme" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/zookeeper/AbstractZookeeperRegistry.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/listener/LogOffListener.java</url>
           <line>31</line>
           <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_341.jdk/Contents/Home/src.zip!/java/util/Map.java</url>
-          <line>784</line>
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/dubbo-domain/src/main/java/com/lxc/dubbo/domain/Url.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/dubbo-domain/src/main/java/com/lxc/dubbo/domain/Url.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/listener/HealthHandler.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="52" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/dubbo-registry/src/main/java/com/lxc/dubbo/registry/config/ZookeeperConfig.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="59" />
+          <line>29</line>
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
