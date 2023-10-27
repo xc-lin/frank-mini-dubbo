@@ -16,8 +16,6 @@
     </parent>
     <modules>
         <module>dubbo-core</module>
-        <module>dubbo-registry</module>
-        <module>dubbo-domain</module>
         <module>dubbo-demo</module>
     </modules>
 

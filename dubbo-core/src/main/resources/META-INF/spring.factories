@@ -1,3 +1,3 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
 com.lxc.dubbo.core.config.FrankDubboConfigAutoConfiguration,\
-com.lxc.dubbo.registry.config.LoadBalanceConfig
+com.lxc.dubbo.core.config.LoadBalanceConfig
