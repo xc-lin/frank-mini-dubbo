@@ -4,16 +4,10 @@ import com.lxc.domain.User;
 import com.lxc.dubbo.core.annotaion.FrankDubbo;
 import com.lxc.interfaces.HelloService;
 
-@FrankDubbo
+@FrankDubbo(flowLimit = -1)
 public class HelloServiceImpl implements HelloService {
     @Override
     public String sayHello() {
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-        System.out.println("hello frank dubbo !!!");
         return "hello frank dubbo !!!";
     }
 

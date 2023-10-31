@@ -11,6 +11,7 @@ import io.netty.channel.ChannelInitializer;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
+import io.netty.handler.codec.json.JsonObjectDecoder;
 import io.netty.handler.codec.string.StringDecoder;
 import io.netty.handler.codec.string.StringEncoder;
 import lombok.extern.slf4j.Slf4j;
@@ -36,8 +37,10 @@ public class NettyClient {
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
                             socketChannel
                                     .pipeline()
-                                    .addLast("decoder", new StringDecoder())
-                                    .addLast("encoder", new StringEncoder())
+                                    // 解决粘包问题
+                                    .addLast(new JsonObjectDecoder())
+                                    .addLast(new StringDecoder())
+                                    .addLast(new StringEncoder())
                                     .addLast(new NettyClientHandler());
                         }
                     });
@@ -50,7 +53,7 @@ public class NettyClient {
 
     public RequestResult send(Invocation invocation, long timeout, TimeUnit timeUnit) throws InterruptedException, ExecutionException, TimeoutException {
         DefaultFuture defaultFuture = new DefaultFuture(socketChannel, invocation, 0);
-        log.info("NettyClient: {}", JSON.toJSONString(invocation));
+//        log.info("NettyClient: {}", JSON.toJSONString(invocation));
         socketChannel.writeAndFlush(JSON.toJSONString(invocation));
         return defaultFuture.get(timeout, timeUnit);
     }

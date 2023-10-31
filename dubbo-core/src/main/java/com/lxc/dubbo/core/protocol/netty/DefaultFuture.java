@@ -3,18 +3,20 @@ package com.lxc.dubbo.core.protocol.netty;
 import com.lxc.dubbo.core.domain.Invocation;
 import com.lxc.dubbo.core.domain.result.RequestResult;
 import io.netty.channel.Channel;
+import lombok.extern.slf4j.Slf4j;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ConcurrentHashMap;
 
+@Slf4j
 public class DefaultFuture extends CompletableFuture<RequestResult> {
     private final Channel channel;
-    private static Map<String, DefaultFuture> FUTURES = new HashMap<String, DefaultFuture>();
+    private static Map<String, DefaultFuture> FUTURES = new ConcurrentHashMap<>();
 
     public DefaultFuture(Channel channel, Invocation invocation, int timeout) {
         this.channel = channel;
-        FUTURES.put(invocation.getUuid(), this);
+        DefaultFuture put = FUTURES.put(invocation.getUuid(), this);
     }
 
     public Channel getChannel() {

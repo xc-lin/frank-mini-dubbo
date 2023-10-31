@@ -15,4 +15,6 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Component
 public @interface FrankDubbo {
+    // 限流配置
+    int flowLimit() default -1;
 }

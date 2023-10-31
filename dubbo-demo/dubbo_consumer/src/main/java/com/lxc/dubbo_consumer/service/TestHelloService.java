@@ -14,7 +14,7 @@ public class TestHelloService {
 
     public void test() {
         String s = helloService.sayHello();
-        System.out.println(s);
+//        System.out.println(s);
     }
 
     public void testUserInfo(){

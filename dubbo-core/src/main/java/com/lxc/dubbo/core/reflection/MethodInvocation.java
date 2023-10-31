@@ -4,8 +4,11 @@ import com.alibaba.fastjson.JSON;
 import com.lxc.dubbo.core.domain.Invocation;
 import com.lxc.dubbo.core.domain.ObjectInfo;
 import com.lxc.dubbo.core.domain.enums.ApiErrCodeExceptionEnum;
+import com.lxc.dubbo.core.domain.enums.OverFlowLimitExceptionEnum;
 import com.lxc.dubbo.core.domain.excetion.ApiErrCodeException;
 import com.lxc.dubbo.core.cache.LocalProviderCache;
+import com.lxc.dubbo.core.domain.excetion.OverFlowLimitException;
+import com.lxc.dubbo.core.limit.FrankRateLimiter;
 import com.lxc.dubbo.core.util.ApplicationContextUtil;
 import lombok.extern.slf4j.Slf4j;
 
@@ -15,7 +18,11 @@ import java.util.Objects;
 
 @Slf4j
 public class MethodInvocation {
-    public static Object providerMethodInvocation(Invocation invocation) throws ApiErrCodeException, IllegalAccessException, InvocationTargetException {
+    public static Object providerMethodInvocation(Invocation invocation) throws ApiErrCodeException, IllegalAccessException, InvocationTargetException, OverFlowLimitException {
+        FrankRateLimiter rateLimit = LocalProviderCache.getRateLimit(invocation.getInterfaceName());
+        if (Objects.nonNull(rateLimit) && !rateLimit.tryAcquire()) {
+            throw new OverFlowLimitException(OverFlowLimitExceptionEnum.OVER_FLOW_LIMIT_EXCEPTION.getCode(), String.format(OverFlowLimitExceptionEnum.OVER_FLOW_LIMIT_EXCEPTION.getMsg(), invocation.getInterfaceName(), rateLimit.getRate()));
+        }
         ObjectInfo objectInfo = LocalProviderCache.get(invocation.getInterfaceName());
         if (Objects.isNull(objectInfo)) {
             log.error("interface未暴露到frank mini dubbo rpc调用中，interfaceName: {}", invocation.getInterfaceName());

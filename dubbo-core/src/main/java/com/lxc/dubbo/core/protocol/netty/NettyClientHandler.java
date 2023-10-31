@@ -24,6 +24,7 @@ public class NettyClientHandler extends ChannelDuplexHandler {
         RequestResult requestResult = JSON.parseObject(msgString, RequestResult.class);
         DefaultFuture defaultFuture = DefaultFuture.getFUTURES().get(requestResult.getUuid());
         defaultFuture.complete(requestResult);
+        DefaultFuture.getFUTURES().remove(requestResult.getUuid());
     }
 
 

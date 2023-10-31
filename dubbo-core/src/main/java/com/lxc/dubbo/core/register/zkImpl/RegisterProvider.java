@@ -35,7 +35,7 @@ public class RegisterProvider implements BeanPostProcessor {
             Class<?>[] interfaces = beanClass.getInterfaces();
             Arrays.stream(interfaces).forEach(i -> {
 
-                LocalProviderCache.register(i.getName(), beanClass, beanName);
+                LocalProviderCache.register(i.getName(), beanClass, beanName, beanClass.getAnnotation(FrankDubbo.class));
                 String hostAddress = NetUtil.getIpAddress();
                 NetUtil.getIpAddress();
 

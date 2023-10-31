@@ -51,7 +51,7 @@ public class NettyConsumerProxy extends AbstractConsumerProxy {
                         }
                         return JSON.toJavaObject((JSON) requestResult.getData(), method.getReturnType());
                     }
-                    log.error("提供者返回接口错误: {}", JSON.toJSONString(requestResult));
+//                    log.error("提供者返回接口错误: {}", JSON.toJSONString(requestResult));
                     throw new RuntimeException(requestResult.getMessage());
                 } catch (TimeoutException e) {
                     throw new TimeoutException(String.format("failed to call %s on remote server %s, Timeout: %s", invocation.getInterfaceName(), url.getAddressAndPort(), frankDubboReference.timeUnit().toMillis(frankDubboReference.timeout())));
