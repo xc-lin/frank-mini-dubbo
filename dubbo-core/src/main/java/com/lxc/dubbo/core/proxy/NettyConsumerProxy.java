@@ -3,6 +3,7 @@ package com.lxc.dubbo.core.proxy;
 
 import com.alibaba.fastjson.JSON;
 import com.lxc.dubbo.core.annotaion.FrankDubboReference;
+import com.lxc.dubbo.core.domain.enums.ProtocolConstants;
 import com.lxc.dubbo.core.domain.excetion.ApiErrCodeException;
 import com.lxc.dubbo.core.domain.Invocation;
 import com.lxc.dubbo.core.domain.Url;
@@ -25,7 +26,7 @@ import static com.lxc.dubbo.core.domain.enums.ApiErrCodeExceptionEnum.NO_ALIVE_P
 
 @Component
 @Slf4j
-@ConditionalOnProperty(value = "protocol", havingValue = "netty")
+@ConditionalOnProperty(value = "protocol", havingValue = ProtocolConstants.NETTY)
 public class NettyConsumerProxy extends AbstractConsumerProxy {
 
     @Override

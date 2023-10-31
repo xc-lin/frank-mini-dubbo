@@ -27,7 +27,7 @@ public class Test {
     }
     @GetMapping("/test")
     public void test(){
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 6; i++) {
             new Thread(()-> {
                 while (true) {
                     try {

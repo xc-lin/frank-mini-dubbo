@@ -28,7 +28,7 @@ public class MethodInvocation {
             log.error("interface未暴露到frank mini dubbo rpc调用中，interfaceName: {}", invocation.getInterfaceName());
             throw new ApiErrCodeException(ApiErrCodeExceptionEnum.INTERFACE_NOT_EXPORT);
         }
-        log.info("执行{}.{}", invocation.getInterfaceName(), invocation.getMethodName());
+        log.debug("执行{}.{}", invocation.getInterfaceName(), invocation.getMethodName());
         Class clazz = objectInfo.getClazz();
         Method method = null;
         try {
@@ -49,7 +49,7 @@ public class MethodInvocation {
             throw new ApiErrCodeException(ApiErrCodeExceptionEnum.OBJECT_NOT_IN_SPRING);
         }
         Object result = method.invoke(bean, invocation.getParams());
-        log.info("result:{}", JSON.toJSONString(result));
+        log.debug("result:{}", JSON.toJSONString(result));
         return result;
     }
 }

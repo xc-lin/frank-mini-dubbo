@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34559095-b9fb-4517-aad4-17e966403188" name="Changes" comment="1、支持提供者限流&#10;2、解决粘包拆包问题&#10;3、解决hashMap并发问题，改用concurrentHashMap" />
+    <list default="true" id="34559095-b9fb-4517-aad4-17e966403188" name="Changes" comment="1、增加readMe">
+      <change afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/domain/enums/ProtocolConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/http/ExceptionAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/http/ExceptionAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/http/HttpProviderMethodInvocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/http/HttpProviderMethodInvocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/HttpConsumerProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/HttpConsumerProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/NettyConsumerProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/NettyConsumerProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/reflection/MethodInvocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/reflection/MethodInvocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/register/zkImpl/RegisterProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/register/zkImpl/RegisterProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/zookeeper/AbstractZookeeperRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/zookeeper/AbstractZookeeperRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/zookeeper/ProviderZookeeperRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/zookeeper/ProviderZookeeperRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-demo/dubbo_consumer/src/main/java/com/lxc/dubbo_consumer/controller/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo/dubbo_consumer/src/main/java/com/lxc/dubbo_consumer/controller/Test.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -132,7 +145,7 @@
       <workItem from="1691851748519" duration="3940000" />
       <workItem from="1698116517139" duration="7666000" />
       <workItem from="1698135195969" duration="20310000" />
-      <workItem from="1698289429761" duration="30066000" />
+      <workItem from="1698289429761" duration="31789000" />
     </task>
     <task id="LOCAL-00001" summary="11">
       <created>1678695876407</created>
@@ -274,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698733026702</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="1、增加readMe">
+      <created>1698733237614</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1698733237614</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,7 +338,8 @@
     <MESSAGE value="优化结构" />
     <MESSAGE value="1、重构整体项目结构&#10;2、支持netty网络协议&#10;3、支持consumer, http以及netty 远程调用超时设置" />
     <MESSAGE value="1、支持提供者限流&#10;2、解决粘包拆包问题&#10;3、解决hashMap并发问题，改用concurrentHashMap" />
-    <option name="LAST_COMMIT_MESSAGE" value="1、支持提供者限流&#10;2、解决粘包拆包问题&#10;3、解决hashMap并发问题，改用concurrentHashMap" />
+    <MESSAGE value="1、增加readMe" />
+    <option name="LAST_COMMIT_MESSAGE" value="1、增加readMe" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -329,7 +350,7 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/HttpConsumerProxy.java</url>
-          <line>49</line>
+          <line>50</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>

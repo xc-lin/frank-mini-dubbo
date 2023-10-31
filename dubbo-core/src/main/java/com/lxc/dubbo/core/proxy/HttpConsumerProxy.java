@@ -5,6 +5,7 @@ import cn.hutool.http.HttpException;
 import cn.hutool.http.HttpUtil;
 import com.alibaba.fastjson.JSON;
 import com.lxc.dubbo.core.annotaion.FrankDubboReference;
+import com.lxc.dubbo.core.domain.enums.ProtocolConstants;
 import com.lxc.dubbo.core.domain.excetion.ApiErrCodeException;
 import com.lxc.dubbo.core.domain.Invocation;
 import com.lxc.dubbo.core.domain.Url;
@@ -28,7 +29,7 @@ import static com.lxc.dubbo.core.domain.enums.ApiErrCodeExceptionEnum.NO_ALIVE_P
 
 @Component
 @Slf4j
-@ConditionalOnProperty(value = "protocol", havingValue = "http")
+@ConditionalOnProperty(value = "protocol", havingValue = ProtocolConstants.HTTP)
 public class HttpConsumerProxy extends AbstractConsumerProxy {
 
     @Override

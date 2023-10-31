@@ -1,5 +1,6 @@
 package com.lxc.dubbo.core.register.zkImpl;
 
+import com.lxc.dubbo.core.domain.enums.ProtocolConstants;
 import com.lxc.dubbo.core.register.Registry;
 import com.lxc.dubbo.core.domain.Url;
 import com.lxc.dubbo.core.util.NetUtil;
@@ -40,7 +41,7 @@ public class RegisterProvider implements BeanPostProcessor {
                 NetUtil.getIpAddress();
 
                 try {
-                    String port = Objects.equals(protocol, "netty") ? nettyPort : httpPort;
+                    String port = Objects.equals(protocol, ProtocolConstants.NETTY) ? nettyPort : httpPort;
                     providerZookeeperRegistry.register(i.getName(), new Url(hostAddress, port));
                 } catch (Exception e) {
                     throw new RuntimeException(e);

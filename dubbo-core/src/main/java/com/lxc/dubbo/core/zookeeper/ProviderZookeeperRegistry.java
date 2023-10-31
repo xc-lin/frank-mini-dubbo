@@ -3,6 +3,7 @@ package com.lxc.dubbo.core.zookeeper;
 import com.alibaba.fastjson.JSON;
 import com.lxc.dubbo.core.domain.Url;
 import com.lxc.dubbo.core.domain.constants.RegistryConstant;
+import com.lxc.dubbo.core.domain.enums.ProtocolConstants;
 import com.lxc.dubbo.core.protocol.netty.NettyServer;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.zookeeper.CreateMode;
@@ -17,7 +18,7 @@ public class ProviderZookeeperRegistry extends AbstractZookeeperRegistry{
 
     @Override
     public void register(String interfaceName, Url url) {
-        if (Objects.equals(protocol, "netty")) {
+        if (Objects.equals(protocol, ProtocolConstants.NETTY)) {
             NettyServer.startServer(Integer.parseInt(url.getPort()));
         }
         try {

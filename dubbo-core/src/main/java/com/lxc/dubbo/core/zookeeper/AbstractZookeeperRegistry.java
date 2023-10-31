@@ -2,6 +2,7 @@ package com.lxc.dubbo.core.zookeeper;
 
 import com.alibaba.fastjson.JSON;
 import com.lxc.dubbo.core.domain.Url;
+import com.lxc.dubbo.core.domain.enums.ProtocolConstants;
 import com.lxc.dubbo.core.register.Registry;
 import com.lxc.dubbo.core.cache.LocalConsumerCache;
 import com.lxc.dubbo.core.protocol.netty.NettyClient;
@@ -62,7 +63,7 @@ public abstract class AbstractZookeeperRegistry implements Registry {
         for (String urlJson : urlJsons) {
             Url url = JSON.parseObject(urlJson, Url.class);
             LocalConsumerCache.set(interfaceName, url);
-            if (Objects.equals(protocol, "netty")) {
+            if (Objects.equals(protocol, ProtocolConstants.NETTY)) {
                 LocalConsumerCache.set(url, new NettyClient(url));
             }
         }
@@ -80,7 +81,7 @@ public abstract class AbstractZookeeperRegistry implements Registry {
                     String urlJson = path.replace("/" + getPrefix() + "/" + interfaceName + "/", "");
                     Url url = JSON.parseObject(urlJson, Url.class);
                     LocalConsumerCache.set(interfaceName, url);
-                    if (Objects.equals(protocol, "netty")) {
+                    if (Objects.equals(protocol, ProtocolConstants.NETTY)) {
                         LocalConsumerCache.set(url, new NettyClient(url));
                     }
                     log.info("接口: {}，增加provider: {}", interfaceName, urlJson);
@@ -91,7 +92,7 @@ public abstract class AbstractZookeeperRegistry implements Registry {
                     LocalConsumerCache.remove(interfaceName, url);
                     log.info("接口: {}，减少provider: {}", interfaceName, urlJson);
 
-                    if (Objects.equals(protocol, "netty")) {
+                    if (Objects.equals(protocol, ProtocolConstants.NETTY)) {
                         LocalConsumerCache.remove(url);
                     }
 
