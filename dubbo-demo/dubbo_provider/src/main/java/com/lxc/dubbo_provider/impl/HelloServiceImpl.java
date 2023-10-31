@@ -1,5 +1,6 @@
 package com.lxc.dubbo_provider.impl;
 
+import com.alibaba.fastjson.JSON;
 import com.lxc.domain.User;
 import com.lxc.dubbo.core.annotaion.FrankDubbo;
 import com.lxc.interfaces.HelloService;
@@ -13,6 +14,7 @@ public class HelloServiceImpl implements HelloService {
 
     @Override
     public User getUserInfo() {
+        System.out.println("getUserInfo");
         User user = new User();
         user.setPassword("1111");
         user.setUsername("1111");

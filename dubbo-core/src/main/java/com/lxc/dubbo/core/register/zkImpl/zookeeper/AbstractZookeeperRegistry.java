@@ -1,4 +1,4 @@
-package com.lxc.dubbo.core.zookeeper;
+package com.lxc.dubbo.core.register.zkImpl.zookeeper;
 
 import com.alibaba.fastjson.JSON;
 import com.lxc.dubbo.core.domain.Url;

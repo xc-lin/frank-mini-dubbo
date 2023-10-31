@@ -1,4 +1,4 @@
-package com.lxc.dubbo.core.zookeeper;
+package com.lxc.dubbo.core.register.zkImpl.zookeeper;
 
 import com.alibaba.fastjson.JSON;
 import com.lxc.dubbo.core.domain.Url;
@@ -13,7 +13,7 @@ import java.util.Objects;
 
 @Component
 @Slf4j
-public class ProviderZookeeperRegistry extends AbstractZookeeperRegistry{
+public class ProviderZookeeperRegistry extends AbstractZookeeperRegistry {
 
 
     @Override
@@ -31,8 +31,9 @@ public class ProviderZookeeperRegistry extends AbstractZookeeperRegistry{
             e.printStackTrace();
         }
     }
+
     @Override
     public String getPrefix() {
-        return RegistryConstant.PROVIDER;
+        return RegistryConstant.PROVIDER + "/" + protocol;
     }
 }
