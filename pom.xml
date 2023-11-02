@@ -15,8 +15,8 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <modules>
-        <module>dubbo-core</module>
-        <module>dubbo-demo</module>
+        <module>frank-mini-dubbo-core</module>
+        <module>frank-mini-dubbo-demo</module>
     </modules>
 
     <properties>
