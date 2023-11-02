@@ -1,17 +1,16 @@
 package com.lxc.dubbo.core.domain;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-public class FrankMiniDubboMessage {
+public class FrankMiniDubboMessage extends FrankMiniDubboBaseMessage{
 
     private Invocation invocation;
 
-    private int sequenceId;
-
-    private int length;
+    public FrankMiniDubboMessage(int sequenceId, int length, int serializeType, Invocation invocation) {
+        super(sequenceId, length, serializeType);
+        this.invocation = invocation;
+    }
 }

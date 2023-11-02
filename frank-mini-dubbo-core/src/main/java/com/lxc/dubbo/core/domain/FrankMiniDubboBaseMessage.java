@@ -9,15 +9,11 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Invocation implements Serializable {
+public class FrankMiniDubboBaseMessage implements Serializable {
 
-    private String interfaceName;
+    private int sequenceId;
 
-    private String methodName;
+    private int length;
 
-    private Object[] params;
-
-    private Class[] paramTypes;
-
-    private String uuid;
+    private int serializeType;
 }

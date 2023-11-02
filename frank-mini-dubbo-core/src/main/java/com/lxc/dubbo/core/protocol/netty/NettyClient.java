@@ -3,7 +3,9 @@ package com.lxc.dubbo.core.protocol.netty;
 import com.lxc.dubbo.core.domain.FrankMiniDubboMessage;
 import com.lxc.dubbo.core.domain.Invocation;
 import com.lxc.dubbo.core.domain.Url;
-import com.lxc.dubbo.core.domain.result.RequestResult;
+import com.lxc.dubbo.core.domain.RequestResult;
+import com.lxc.dubbo.core.domain.enums.SerializeTypeEnum;
+import com.lxc.dubbo.core.util.ApplicationContextUtil;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
@@ -54,7 +56,9 @@ public class NettyClient {
     public RequestResult send(Invocation invocation, long timeout, TimeUnit timeUnit) throws InterruptedException, ExecutionException, TimeoutException {
         DefaultFuture defaultFuture = new DefaultFuture(socketChannel, invocation, 0);
 //        log.info("NettyClient: {}", JSON.toJSONString(invocation));
-        socketChannel.writeAndFlush(new FrankMiniDubboMessage(invocation, 0,0));
+        String serializeTypeInSystem = ApplicationContextUtil.getContext().getEnvironment().getProperty("serializeType");
+        int serializeType = SerializeTypeEnum.getByName(serializeTypeInSystem).getCode();
+        socketChannel.writeAndFlush(new FrankMiniDubboMessage(0, 0, serializeType, invocation));
         return defaultFuture.get(timeout, timeUnit);
     }
 

@@ -1,7 +1,7 @@
 package com.lxc.dubbo.core.protocol.http;
 
 import com.alibaba.fastjson.JSON;
-import com.lxc.dubbo.core.domain.result.RequestResult;
+import com.lxc.dubbo.core.domain.RequestResult;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
 import org.springframework.http.server.ServerHttpRequest;

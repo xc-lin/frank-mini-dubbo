@@ -1,7 +1,7 @@
 package com.lxc.dubbo.core.protocol.netty;
 
 import com.lxc.dubbo.core.domain.Invocation;
-import com.lxc.dubbo.core.domain.result.RequestResult;
+import com.lxc.dubbo.core.domain.RequestResult;
 import io.netty.channel.Channel;
 import lombok.extern.slf4j.Slf4j;
 

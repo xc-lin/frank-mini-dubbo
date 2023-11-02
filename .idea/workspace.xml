@@ -4,85 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34559095-b9fb-4517-aad4-17e966403188" name="Changes" comment="1、修改包名">
-      <change afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/FrankMiniDubboMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/FrankMiniDubboResultMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/FrankMiniDubboInvocationCodec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/FrankMiniDubboResultCodec.java" afterDir="false" />
+    <list default="true" id="34559095-b9fb-4517-aad4-17e966403188" name="Changes" comment="1、修改包名&#10;2、增加自定义协议，解决粘包拆包问题">
+      <change afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/FrankMiniDubboBaseMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/enums/SerializeTypeEnum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/annotaion/FrankDubbo.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/annotaion/FrankDubbo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/annotaion/FrankDubboReference.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/annotaion/FrankDubboReference.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/cache/LocalConsumerCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/cache/LocalConsumerCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/cache/LocalProviderCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/cache/LocalProviderCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/config/FrankDubboConfigAutoConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/config/FrankDubboConfigAutoConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/config/LoadBalanceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/config/LoadBalanceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/config/ZookeeperConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/config/ZookeeperConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/config/ZookeeperProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/config/ZookeeperProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/domain/Invocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/Invocation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/domain/ObjectInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/ObjectInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/domain/Url.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/Url.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/domain/constants/RegistryConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/constants/RegistryConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/domain/constants/UrlConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/constants/UrlConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/domain/enums/ApiErrCodeExceptionEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/enums/ApiErrCodeExceptionEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/domain/enums/HealthEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/enums/HealthEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/domain/enums/OverFlowLimitExceptionEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/enums/OverFlowLimitExceptionEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/domain/enums/ProtocolConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/enums/ProtocolConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/domain/excetion/ApiErrCodeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/excetion/ApiErrCodeException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/domain/excetion/OverFlowLimitException.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/excetion/OverFlowLimitException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/domain/result/RequestResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/result/RequestResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/invocation/HealthResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/invocation/HealthResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/limit/FrankRateLimiter.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/limit/FrankRateLimiter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/listener/HealthHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/listener/HealthHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/listener/LogOffListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/listener/LogOffListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/loadbalance/LoadBalance.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/loadbalance/LoadBalance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/loadbalance/impl/RandomLoadBalance.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/loadbalance/impl/RandomLoadBalance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/loadbalance/impl/RoundRobinLoadBalance.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/loadbalance/impl/RoundRobinLoadBalance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/http/ExceptionAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/http/ExceptionAdvice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/http/HttpProviderMethodInvocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/http/HttpProviderMethodInvocation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/http/responseBodyAdviceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/http/responseBodyAdviceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/DefaultFuture.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/DefaultFuture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyServerHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/AbstractConsumerProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/AbstractConsumerProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/HttpConsumerProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/HttpConsumerProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/NettyConsumerProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/NettyConsumerProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/reflection/MethodInvocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/reflection/MethodInvocation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/register/Registry.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/register/Registry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/register/zkImpl/RegisterConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/register/zkImpl/RegisterConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/register/zkImpl/RegisterProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/register/zkImpl/RegisterProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/register/zkImpl/zookeeper/AbstractZookeeperRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/register/zkImpl/zookeeper/AbstractZookeeperRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/register/zkImpl/zookeeper/ConsumerZookeeperRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/register/zkImpl/zookeeper/ConsumerZookeeperRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/register/zkImpl/zookeeper/ProviderZookeeperRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/register/zkImpl/zookeeper/ProviderZookeeperRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/util/ApplicationContextUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/util/ApplicationContextUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/java/com/lxc/dubbo/core/util/NetUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/util/NetUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/resources/META-INF/spring.factories" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/resources/META-INF/spring.factories" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/resources/application-frank-mini-dubbo.properties" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/resources/application-frank-mini-dubbo.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/main/resources/banner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/resources/banner.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-core/src/test/java/com/lxc/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/test/java/com/lxc/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-demo/dubbo_consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-demo/dubbo_consumer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-demo/dubbo_consumer/src/main/java/com/lxc/dubbo_consumer/DubboConsumerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-demo/dubbo_consumer/src/main/java/com/lxc/dubbo_consumer/DubboConsumerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-demo/dubbo_consumer/src/main/java/com/lxc/dubbo_consumer/controller/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-demo/dubbo_consumer/src/main/java/com/lxc/dubbo_consumer/controller/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-demo/dubbo_consumer/src/main/java/com/lxc/dubbo_consumer/service/TestHelloService.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-demo/dubbo_consumer/src/main/java/com/lxc/dubbo_consumer/service/TestHelloService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-demo/dubbo_consumer/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-demo/dubbo_consumer/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-demo/dubbo_consumer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-demo/dubbo_consumer/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-demo/dubbo_consumer/src/test/java/com/lxc/dubbo_consumer/DubboConsumerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-demo/dubbo_consumer/src/test/java/com/lxc/dubbo_consumer/DubboConsumerApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-demo/dubbo_provider/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-demo/dubbo_provider/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-demo/dubbo_provider/src/main/java/com/lxc/dubbo_provider/DubboProviderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-demo/dubbo_provider/src/main/java/com/lxc/dubbo_provider/DubboProviderApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-demo/dubbo_provider/src/main/java/com/lxc/dubbo_provider/impl/HelloServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-demo/dubbo_provider/src/main/java/com/lxc/dubbo_provider/impl/HelloServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-demo/dubbo_provider/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-demo/dubbo_provider/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-demo/dubbo_provider/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-demo/dubbo_provider/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-demo/dubbo_provider/src/test/java/com/lxc/dubbo_provider/DubboProviderApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-demo/dubbo_provider/src/test/java/com/lxc/dubbo_provider/DubboProviderApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-demo/interface/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-demo/interface/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-demo/interface/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-demo/interface/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-demo/interface/src/main/java/com/lxc/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-demo/interface/src/main/java/com/lxc/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-demo/interface/src/main/java/com/lxc/interfaces/HelloService.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-demo/interface/src/main/java/com/lxc/interfaces/HelloService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-demo/interface/src/test/java/com/lxc/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-demo/interface/src/test/java/com/lxc/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-demo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/FrankMiniDubboMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/FrankMiniDubboMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/FrankMiniDubboResultMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/FrankMiniDubboResultMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/Invocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/Invocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/result/RequestResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/RequestResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/http/ExceptionAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/http/ExceptionAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/http/responseBodyAdviceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/http/responseBodyAdviceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/DefaultFuture.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/DefaultFuture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/FrankMiniDubboInvocationCodec.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/FrankMiniDubboInvocationCodec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/FrankMiniDubboResultCodec.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/FrankMiniDubboResultCodec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyServerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/HttpConsumerProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/HttpConsumerProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/NettyConsumerProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/NettyConsumerProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-demo/dubbo_consumer/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-demo/dubbo_consumer/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-demo/dubbo_provider/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-demo/dubbo_provider/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-demo/interface/src/main/java/com/lxc/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-demo/interface/src/main/java/com/lxc/domain/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,8 +98,8 @@
       <recent name="$PROJECT_DIR$/dubbo-domain" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.lxc.dubbo.core.protocol.netty" />
       <recent name="com.lxc.dubbo.core.domain" />
+      <recent name="com.lxc.dubbo.core.protocol.netty" />
       <recent name="com.lxc.dubbo.core.domain.enums" />
       <recent name="com.lxc.dubbo.core.domain.excetion" />
       <recent name="com.lxc.dubbo.registry.netty" />
@@ -221,7 +164,7 @@
       <workItem from="1691851748519" duration="3940000" />
       <workItem from="1698116517139" duration="7666000" />
       <workItem from="1698135195969" duration="20310000" />
-      <workItem from="1698289429761" duration="48169000" />
+      <workItem from="1698289429761" duration="56083000" />
     </task>
     <task id="LOCAL-00001" summary="11">
       <created>1678695876407</created>
@@ -384,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698737717985</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="1、修改包名&#10;2、增加自定义协议，解决粘包拆包问题">
+      <created>1698896137737</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1698896137737</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -432,25 +382,41 @@
     <MESSAGE value="1、消除魔法值&#10;2、增加压测报告" />
     <MESSAGE value="1、解决consumer和provider协议不同，仍尝试调用的情况，在注册中心中，加入协议前缀" />
     <MESSAGE value="1、修改包名" />
-    <option name="LAST_COMMIT_MESSAGE" value="1、修改包名" />
+    <MESSAGE value="1、修改包名&#10;2、增加自定义协议，解决粘包拆包问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="1、修改包名&#10;2、增加自定义协议，解决粘包拆包问题" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyServerHandler.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="47" />
+          <url>file://$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/FrankMiniDubboInvocationCodec.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyServerHandler.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="49" />
+          <url>file://$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/FrankMiniDubboResultCodec.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyClientHandler.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="50" />
+          <url>file://$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/FrankMiniDubboInvocationCodec.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/FrankMiniDubboResultCodec.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/NettyConsumerProxy.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/NettyConsumerProxy.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="65" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

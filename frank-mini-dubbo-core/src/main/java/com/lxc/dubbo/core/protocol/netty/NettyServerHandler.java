@@ -1,10 +1,11 @@
 package com.lxc.dubbo.core.protocol.netty;
 
-import com.alibaba.fastjson.JSON;
 import com.lxc.dubbo.core.domain.FrankMiniDubboResultMessage;
 import com.lxc.dubbo.core.domain.Invocation;
-import com.lxc.dubbo.core.domain.result.RequestResult;
+import com.lxc.dubbo.core.domain.RequestResult;
+import com.lxc.dubbo.core.domain.enums.SerializeTypeEnum;
 import com.lxc.dubbo.core.reflection.MethodInvocation;
+import com.lxc.dubbo.core.util.ApplicationContextUtil;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelDuplexHandler;
 import io.netty.channel.ChannelHandlerContext;
@@ -32,10 +33,12 @@ public class NettyServerHandler extends ChannelDuplexHandler {
             o = MethodInvocation.providerMethodInvocation(invocation);
             requestResult = RequestResult.buildSuccess(o);
         } catch (Exception e) {
-            requestResult  = RequestResult.buildFailure(e);
+            requestResult = RequestResult.buildFailure(e);
         }
         requestResult.setUuid(invocation.getUuid());
-        ctx.writeAndFlush(new FrankMiniDubboResultMessage(0, 0, requestResult));
+        String serializeTypeInSystem = ApplicationContextUtil.getContext().getEnvironment().getProperty("serializeType");
+        int serializeType = SerializeTypeEnum.getByName(serializeTypeInSystem).getCode();
+        ctx.writeAndFlush(new FrankMiniDubboResultMessage(0, 0, serializeType, requestResult));
     }
 
 

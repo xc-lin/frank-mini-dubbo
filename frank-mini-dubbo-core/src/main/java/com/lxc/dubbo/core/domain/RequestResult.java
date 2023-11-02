@@ -1,11 +1,11 @@
-package com.lxc.dubbo.core.domain.result;
+package com.lxc.dubbo.core.domain;
 
 import lombok.Data;
 
-import java.util.Objects;
+import java.io.Serializable;
 
 @Data
-public class RequestResult<T> {
+public class RequestResult<T> implements Serializable {
 
     private boolean success;
 

@@ -2,7 +2,7 @@ package com.lxc.dubbo.core.protocol.http;
 
 import com.lxc.dubbo.core.domain.enums.ProtocolConstants;
 import com.lxc.dubbo.core.domain.excetion.ApiErrCodeException;
-import com.lxc.dubbo.core.domain.result.RequestResult;
+import com.lxc.dubbo.core.domain.RequestResult;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
