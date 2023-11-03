@@ -4,28 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34559095-b9fb-4517-aad4-17e966403188" name="Changes" comment="1、修改包名&#10;2、增加自定义协议，解决粘包拆包问题">
-      <change afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/FrankMiniDubboBaseMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/enums/SerializeTypeEnum.java" afterDir="false" />
+    <list default="true" id="34559095-b9fb-4517-aad4-17e966403188" name="Changes" comment="1、支持netty协议下，hessian序列化格式">
+      <change afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/FrankMiniDubboBaseCodec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/util/LogUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/FrankMiniDubboBaseMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/FrankMiniDubboBaseMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/FrankMiniDubboMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/FrankMiniDubboMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/FrankMiniDubboResultMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/FrankMiniDubboResultMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/Invocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/Invocation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/result/RequestResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/RequestResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/http/ExceptionAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/http/ExceptionAdvice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/http/responseBodyAdviceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/http/responseBodyAdviceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/DefaultFuture.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/DefaultFuture.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/FrankMiniDubboInvocationCodec.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/FrankMiniDubboInvocationCodec.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/FrankMiniDubboResultCodec.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/FrankMiniDubboResultCodec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyServerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/AbstractConsumerProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/AbstractConsumerProxy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/HttpConsumerProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/HttpConsumerProxy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/NettyConsumerProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/NettyConsumerProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/reflection/MethodInvocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/reflection/MethodInvocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/register/zkImpl/zookeeper/AbstractZookeeperRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/register/zkImpl/zookeeper/AbstractZookeeperRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/register/zkImpl/zookeeper/ProviderZookeeperRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/register/zkImpl/zookeeper/ProviderZookeeperRegistry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-demo/dubbo_consumer/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-demo/dubbo_consumer/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-demo/dubbo_provider/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-demo/dubbo_provider/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-demo/interface/src/main/java/com/lxc/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-demo/interface/src/main/java/com/lxc/domain/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +82,7 @@
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.63908046",
     "settings.editor.selected.configurable": "MavenSettings",
-    "spring.configuration.checksum": "bec111eb849bd80a52d9799535d8cdd5"
+    "spring.configuration.checksum": "03fe9c6b5dc4b7c639368de1bf0ae815"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -98,8 +96,8 @@
       <recent name="$PROJECT_DIR$/dubbo-domain" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.lxc.dubbo.core.domain" />
       <recent name="com.lxc.dubbo.core.protocol.netty" />
+      <recent name="com.lxc.dubbo.core.domain" />
       <recent name="com.lxc.dubbo.core.domain.enums" />
       <recent name="com.lxc.dubbo.core.domain.excetion" />
       <recent name="com.lxc.dubbo.registry.netty" />
@@ -164,7 +162,8 @@
       <workItem from="1691851748519" duration="3940000" />
       <workItem from="1698116517139" duration="7666000" />
       <workItem from="1698135195969" duration="20310000" />
-      <workItem from="1698289429761" duration="56083000" />
+      <workItem from="1698289429761" duration="57077000" />
+      <workItem from="1698980874873" duration="7112000" />
     </task>
     <task id="LOCAL-00001" summary="11">
       <created>1678695876407</created>
@@ -334,7 +333,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698896137737</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="1、支持netty协议下，hessian序列化格式">
+      <created>1698913974824</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1698913974824</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -383,40 +389,16 @@
     <MESSAGE value="1、解决consumer和provider协议不同，仍尝试调用的情况，在注册中心中，加入协议前缀" />
     <MESSAGE value="1、修改包名" />
     <MESSAGE value="1、修改包名&#10;2、增加自定义协议，解决粘包拆包问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="1、修改包名&#10;2、增加自定义协议，解决粘包拆包问题" />
+    <MESSAGE value="1、支持netty协议下，hessian序列化格式" />
+    <option name="LAST_COMMIT_MESSAGE" value="1、支持netty协议下，hessian序列化格式" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/FrankMiniDubboInvocationCodec.java</url>
-          <line>69</line>
-          <option name="timeStamp" value="52" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/FrankMiniDubboResultCodec.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/FrankMiniDubboInvocationCodec.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="57" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/FrankMiniDubboResultCodec.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="58" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/NettyConsumerProxy.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="64" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/NettyConsumerProxy.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="65" />
+          <url>jar://$USER_HOME$/.m2/repository/io/netty/netty-codec/4.1.89.Final/netty-codec-4.1.89.Final.jar!/io/netty/handler/codec/LengthFieldBasedFrameDecoder.class</url>
+          <line>105</line>
+          <option name="timeStamp" value="76" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -6,6 +6,7 @@ import com.lxc.dubbo.core.domain.RequestResult;
 import com.lxc.dubbo.core.domain.enums.SerializeTypeEnum;
 import com.lxc.dubbo.core.reflection.MethodInvocation;
 import com.lxc.dubbo.core.util.ApplicationContextUtil;
+import com.lxc.dubbo.core.util.LogUtil;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelDuplexHandler;
 import io.netty.channel.ChannelHandlerContext;
@@ -20,7 +21,7 @@ public class NettyServerHandler extends ChannelDuplexHandler {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         Channel channel = ctx.channel();
-        log.info("provider: {} 成功连接, consumer: {}", channel.localAddress(), channel.remoteAddress());
+        LogUtil.info("provider: {} 成功连接, consumer: {}", channel.localAddress(), channel.remoteAddress());
     }
 
     //当通道有读取事件时，会触发

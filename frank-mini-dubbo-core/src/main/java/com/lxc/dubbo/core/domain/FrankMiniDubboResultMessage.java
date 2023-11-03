@@ -7,12 +7,11 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class FrankMiniDubboResultMessage extends FrankMiniDubboBaseMessage{
+public class FrankMiniDubboResultMessage extends FrankMiniDubboBaseMessage<RequestResult>{
 
     private RequestResult requestResult;
 
     public FrankMiniDubboResultMessage(int sequenceId, int length, int serializeType, RequestResult requestResult) {
-        super(sequenceId, length, serializeType);
-        this.requestResult = requestResult;
+        super(sequenceId, length, serializeType, requestResult);
     }
 }

@@ -1,6 +1,7 @@
 package com.lxc.dubbo.core.protocol.netty;
 
 import com.lxc.dubbo.core.domain.RequestResult;
+import com.lxc.dubbo.core.util.LogUtil;
 import io.netty.channel.*;
 import lombok.extern.slf4j.Slf4j;
 
@@ -13,7 +14,7 @@ public class NettyClientHandler extends ChannelDuplexHandler {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         Channel channel = ctx.channel();
-        log.info("consumer: {} 成功连接, provider: {}", channel.localAddress(), channel.remoteAddress());
+        LogUtil.info("consumer: {} 成功连接, provider: {}", channel.localAddress(), channel.remoteAddress());
     }
 
     //当通道有读取事件时，会触发

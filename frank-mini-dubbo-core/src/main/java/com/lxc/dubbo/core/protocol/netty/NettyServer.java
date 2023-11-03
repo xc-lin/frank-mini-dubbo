@@ -1,5 +1,6 @@
 package com.lxc.dubbo.core.protocol.netty;
 
+import com.lxc.dubbo.core.util.LogUtil;
 import com.lxc.dubbo.core.util.NetUtil;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
@@ -38,7 +39,7 @@ public class NettyServer {
 
             String hostAddress = NetUtil.getIpAddress();
             ChannelFuture channelFuture = serverBootstrap.bind(port).sync();
-            log.info("当前服务器netty已启动, {}:{}", hostAddress, port);
+            LogUtil.info("当前服务器netty已启动, {}:{}", hostAddress, port);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

@@ -6,6 +6,7 @@ import com.lxc.dubbo.core.domain.enums.ProtocolConstants;
 import com.lxc.dubbo.core.register.Registry;
 import com.lxc.dubbo.core.cache.LocalConsumerCache;
 import com.lxc.dubbo.core.protocol.netty.NettyClient;
+import com.lxc.dubbo.core.util.LogUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.recipes.cache.PathChildrenCache;
@@ -37,7 +38,7 @@ public abstract class AbstractZookeeperRegistry implements Registry {
                 client.create().creatingParentsIfNeeded().withMode(CreateMode.PERSISTENT).forPath("/" + getPrefix() + "/" + interfaceName);
             }
             String nodePath = client.create().withMode(CreateMode.EPHEMERAL).forPath(String.format("/" + getPrefix() + "/%s/%s", interfaceName, JSON.toJSONString(url)));
-            log.info("frank mini dubbo register service: {} on dubbo node: {}", interfaceName, nodePath);
+            LogUtil.info("frank mini dubbo register service: {} on dubbo node: {}", interfaceName, nodePath);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -67,7 +68,7 @@ public abstract class AbstractZookeeperRegistry implements Registry {
                 LocalConsumerCache.set(url, new NettyClient(url));
             }
         }
-        log.info("接口: {}, url：{}存入本地缓存", interfaceName, urlJsons);
+        LogUtil.info("接口: {}, url：{}存入本地缓存", interfaceName, urlJsons);
     }
 
     @Override
@@ -84,13 +85,13 @@ public abstract class AbstractZookeeperRegistry implements Registry {
                     if (Objects.equals(protocol, ProtocolConstants.NETTY)) {
                         LocalConsumerCache.set(url, new NettyClient(url));
                     }
-                    log.info("接口: {}，增加provider: {}", interfaceName, urlJson);
+                    LogUtil.info("接口: {}，增加provider: {}", interfaceName, urlJson);
                 } else if (event.getType().equals(PathChildrenCacheEvent.Type.CHILD_REMOVED)) {
                     String path = event.getData().getPath();
                     String urlJson = path.replace("/" + getPrefix() + "/" + interfaceName + "/", "");
                     Url url = JSON.parseObject(urlJson, Url.class);
                     LocalConsumerCache.remove(interfaceName, url);
-                    log.info("接口: {}，减少provider: {}", interfaceName, urlJson);
+                    LogUtil.info("接口: {}，减少provider: {}", interfaceName, urlJson);
 
                     if (Objects.equals(protocol, ProtocolConstants.NETTY)) {
                         LocalConsumerCache.remove(url);

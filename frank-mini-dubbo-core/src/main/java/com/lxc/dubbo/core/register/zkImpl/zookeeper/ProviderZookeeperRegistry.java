@@ -5,6 +5,7 @@ import com.lxc.dubbo.core.domain.Url;
 import com.lxc.dubbo.core.domain.constants.RegistryConstant;
 import com.lxc.dubbo.core.domain.enums.ProtocolConstants;
 import com.lxc.dubbo.core.protocol.netty.NettyServer;
+import com.lxc.dubbo.core.util.LogUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.zookeeper.CreateMode;
 import org.springframework.stereotype.Component;
@@ -26,7 +27,7 @@ public class ProviderZookeeperRegistry extends AbstractZookeeperRegistry {
                 client.create().creatingParentsIfNeeded().withMode(CreateMode.PERSISTENT).forPath("/" + getPrefix() + "/" + interfaceName);
             }
             String nodePath = client.create().withMode(CreateMode.EPHEMERAL).forPath(String.format("/" + getPrefix() + "/%s/%s", interfaceName, JSON.toJSONString(url)));
-            log.info("frank mini dubbo register service: {} on dubbo node: {}", interfaceName, nodePath);
+            LogUtil.info("frank mini dubbo register service: {} on dubbo node: {}", interfaceName, nodePath);
         } catch (Exception e) {
             e.printStackTrace();
         }

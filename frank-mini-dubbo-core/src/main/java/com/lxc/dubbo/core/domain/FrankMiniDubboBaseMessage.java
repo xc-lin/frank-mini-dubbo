@@ -9,11 +9,13 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class FrankMiniDubboBaseMessage implements Serializable {
+public class FrankMiniDubboBaseMessage<T> implements Serializable {
 
     private int sequenceId;
 
     private int length;
 
     private int serializeType;
+
+    private T data;
 }
