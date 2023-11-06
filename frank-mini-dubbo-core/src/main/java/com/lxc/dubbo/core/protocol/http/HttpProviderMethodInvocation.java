@@ -3,7 +3,7 @@ package com.lxc.dubbo.core.protocol.http;
 import com.lxc.dubbo.core.domain.Invocation;
 import com.lxc.dubbo.core.domain.constants.UrlConstant;
 import com.lxc.dubbo.core.domain.enums.ProtocolConstants;
-import com.lxc.dubbo.core.reflection.MethodInvocation;
+import com.lxc.dubbo.core.invoker.MethodInvocation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.web.bind.annotation.PostMapping;

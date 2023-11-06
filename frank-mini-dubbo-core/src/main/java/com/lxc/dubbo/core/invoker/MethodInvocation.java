@@ -1,4 +1,4 @@
-package com.lxc.dubbo.core.reflection;
+package com.lxc.dubbo.core.invoker;
 
 import com.alibaba.fastjson.JSON;
 import com.lxc.dubbo.core.domain.Invocation;

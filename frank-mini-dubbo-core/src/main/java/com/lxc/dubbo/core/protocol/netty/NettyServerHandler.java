@@ -4,7 +4,7 @@ import com.lxc.dubbo.core.domain.FrankMiniDubboResultMessage;
 import com.lxc.dubbo.core.domain.Invocation;
 import com.lxc.dubbo.core.domain.RequestResult;
 import com.lxc.dubbo.core.domain.enums.SerializeTypeEnum;
-import com.lxc.dubbo.core.reflection.MethodInvocation;
+import com.lxc.dubbo.core.invoker.MethodInvocation;
 import com.lxc.dubbo.core.util.ApplicationContextUtil;
 import com.lxc.dubbo.core.util.LogUtil;
 import io.netty.channel.Channel;

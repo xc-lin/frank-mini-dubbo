@@ -4,26 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34559095-b9fb-4517-aad4-17e966403188" name="Changes" comment="1、支持netty协议下，hessian序列化格式">
-      <change afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/FrankMiniDubboBaseCodec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/util/LogUtil.java" afterDir="false" />
+    <list default="true" id="34559095-b9fb-4517-aad4-17e966403188" name="Changes" comment="1、优化代码结构&#10;2、增加基类，减少冗余代码">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/FrankMiniDubboBaseMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/FrankMiniDubboBaseMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/FrankMiniDubboMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/FrankMiniDubboMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/FrankMiniDubboResultMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/FrankMiniDubboResultMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/FrankMiniDubboInvocationCodec.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/FrankMiniDubboInvocationCodec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/FrankMiniDubboResultCodec.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/FrankMiniDubboResultCodec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyServerHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/AbstractConsumerProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/AbstractConsumerProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/HttpConsumerProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/HttpConsumerProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/NettyConsumerProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/proxy/NettyConsumerProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/reflection/MethodInvocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/reflection/MethodInvocation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/register/zkImpl/zookeeper/AbstractZookeeperRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/register/zkImpl/zookeeper/AbstractZookeeperRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/register/zkImpl/zookeeper/ProviderZookeeperRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/register/zkImpl/zookeeper/ProviderZookeeperRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-demo/dubbo_consumer/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-demo/dubbo_consumer/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-demo/dubbo_provider/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-demo/dubbo_provider/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,27 +46,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelOrder2": "2",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RequestMappingsPanelWidth2": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "/Users/linxianchao3/IdeaProjects/frank-mini-dubbo",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Global Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.63908046",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "spring.configuration.checksum": "03fe9c6b5dc4b7c639368de1bf0ae815"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelOrder2&quot;: &quot;2&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth2&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/linxianchao3/IdeaProjects/frank-mini-dubbo&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.63908046&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;03fe9c6b5dc4b7c639368de1bf0ae815&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/dubbo-demo/dubbo_consumer/src/main/resources" />
@@ -163,7 +145,7 @@
       <workItem from="1698116517139" duration="7666000" />
       <workItem from="1698135195969" duration="20310000" />
       <workItem from="1698289429761" duration="57077000" />
-      <workItem from="1698980874873" duration="7112000" />
+      <workItem from="1698980874873" duration="7539000" />
     </task>
     <task id="LOCAL-00001" summary="11">
       <created>1678695876407</created>
@@ -340,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698913974824</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="1、优化代码结构&#10;2、增加基类，减少冗余代码">
+      <created>1698998497813</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1698998497813</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -390,7 +379,8 @@
     <MESSAGE value="1、修改包名" />
     <MESSAGE value="1、修改包名&#10;2、增加自定义协议，解决粘包拆包问题" />
     <MESSAGE value="1、支持netty协议下，hessian序列化格式" />
-    <option name="LAST_COMMIT_MESSAGE" value="1、支持netty协议下，hessian序列化格式" />
+    <MESSAGE value="1、优化代码结构&#10;2、增加基类，减少冗余代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="1、优化代码结构&#10;2、增加基类，减少冗余代码" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
