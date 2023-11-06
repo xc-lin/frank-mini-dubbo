@@ -1,6 +1,6 @@
 package com.lxc.dubbo.core.protocol.netty;
 
-import com.lxc.dubbo.core.domain.FrankMiniDubboMessage;
+import com.lxc.dubbo.core.domain.FrankMiniDubboInvocationMessage;
 import com.lxc.dubbo.core.domain.Invocation;
 import com.lxc.dubbo.core.domain.Url;
 import com.lxc.dubbo.core.domain.RequestResult;
@@ -41,8 +41,9 @@ public class NettyClient {
                                     // 解决粘包问题
                                     .addLast(new LoggingHandler())
                                     .addLast(new LengthFieldBasedFrameDecoder(1000000, 12, 4, 0, 0))
-                                    .addLast(new FrankMiniDubboResultCodec())
-                                    .addLast(new FrankMiniDubboInvocationCodec())
+                                    .addLast(new FrankMiniDubboCodec())
+                                    .addLast(new FrankMiniDubboInvocationHandler())
+                                    .addLast(new FrankMiniDubboResponseSerializeHandler())
                                     .addLast(new NettyClientHandler());
                         }
                     });
@@ -58,7 +59,7 @@ public class NettyClient {
 //        log.info("NettyClient: {}", JSON.toJSONString(invocation));
         String serializeTypeInSystem = ApplicationContextUtil.getContext().getEnvironment().getProperty("serializeType");
         int serializeType = SerializeTypeEnum.getByName(serializeTypeInSystem).getCode();
-        socketChannel.writeAndFlush(new FrankMiniDubboMessage(0, 0, serializeType, invocation));
+        socketChannel.writeAndFlush(new FrankMiniDubboInvocationMessage(0, 0, serializeType, invocation));
         return defaultFuture.get(timeout, timeUnit);
     }
 

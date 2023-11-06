@@ -27,13 +27,13 @@ public class NettyServer {
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
-                            ChannelPipeline pipeline = socketChannel.pipeline();
-                            // 解决粘包 拆包问题
-                            pipeline.addLast(new LoggingHandler());
-                            pipeline.addLast(new LengthFieldBasedFrameDecoder(100000000, 12, 4, 0, 0));
-                            pipeline.addLast(new FrankMiniDubboInvocationCodec());
-                            pipeline.addLast(new FrankMiniDubboResultCodec());
-                            pipeline.addLast(new NettyServerHandler());
+                            socketChannel.pipeline()
+                                    .addLast(new LoggingHandler())
+                                    .addLast(new LengthFieldBasedFrameDecoder(100000000, 12, 4, 0, 0))
+                                    .addLast(new FrankMiniDubboCodec())
+                                    .addLast(new FrankMiniDubboInvocationHandler())
+                                    .addLast(new FrankMiniDubboResponseSerializeHandler())
+                                    .addLast(new NettyServerHandler());
                         }
                     });
 

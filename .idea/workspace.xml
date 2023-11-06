@@ -4,8 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34559095-b9fb-4517-aad4-17e966403188" name="Changes" comment="1、优化代码结构&#10;2、增加基类，减少冗余代码">
+    <list default="true" id="34559095-b9fb-4517-aad4-17e966403188" name="Changes" comment="1、将协议编码解码以及 序列化解耦">
+      <change afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/FrankMiniDubboProtocol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/AbstractFrankMiniDubboSerializeHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/FrankMiniDubboInvocationHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/FrankMiniDubboResponseSerializeHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/FrankMiniDubboMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/domain/FrankMiniDubboInvocationMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/FrankMiniDubboBaseCodec.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/FrankMiniDubboCodec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/FrankMiniDubboInvocationCodec.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/FrankMiniDubboResultCodec.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +43,9 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="mavenHome" value="$USER_HOME$/Java/apache-maven-3.6.3" />
         <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="$USER_HOME$/Java/apache-maven-3.6.3/conf/settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -146,6 +158,7 @@
       <workItem from="1698135195969" duration="20310000" />
       <workItem from="1698289429761" duration="57077000" />
       <workItem from="1698980874873" duration="7539000" />
+      <workItem from="1699255710079" duration="5641000" />
     </task>
     <task id="LOCAL-00001" summary="11">
       <created>1678695876407</created>
@@ -329,7 +342,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698998497813</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="1、修改包名">
+      <created>1699255854341</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1699255854341</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,19 +396,30 @@
     <MESSAGE value="1、增加readMe" />
     <MESSAGE value="1、消除魔法值&#10;2、增加压测报告" />
     <MESSAGE value="1、解决consumer和provider协议不同，仍尝试调用的情况，在注册中心中，加入协议前缀" />
-    <MESSAGE value="1、修改包名" />
     <MESSAGE value="1、修改包名&#10;2、增加自定义协议，解决粘包拆包问题" />
     <MESSAGE value="1、支持netty协议下，hessian序列化格式" />
     <MESSAGE value="1、优化代码结构&#10;2、增加基类，减少冗余代码" />
-    <option name="LAST_COMMIT_MESSAGE" value="1、优化代码结构&#10;2、增加基类，减少冗余代码" />
+    <MESSAGE value="1、修改包名" />
+    <MESSAGE value="1、将协议编码解码以及 序列化解耦" />
+    <option name="LAST_COMMIT_MESSAGE" value="1、将协议编码解码以及 序列化解耦" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$USER_HOME$/.m2/repository/io/netty/netty-codec/4.1.89.Final/netty-codec-4.1.89.Final.jar!/io/netty/handler/codec/LengthFieldBasedFrameDecoder.class</url>
-          <line>105</line>
-          <option name="timeStamp" value="76" />
+          <url>file://$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/FrankMiniDubboCodec.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/AbstractFrankMiniDubboSerializeHandler.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/frank-mini-dubbo-core/src/main/java/com/lxc/dubbo/core/protocol/netty/NettyClientHandler.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="85" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
