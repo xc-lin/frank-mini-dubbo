@@ -1,6 +1,7 @@
 package com.lxc.dubbo.core.register.zkImpl;
 
 import com.lxc.dubbo.core.domain.enums.ProtocolConstants;
+import com.lxc.dubbo.core.protocol.netty.NettyServer;
 import com.lxc.dubbo.core.register.Registry;
 import com.lxc.dubbo.core.domain.Url;
 import com.lxc.dubbo.core.util.NetUtil;
@@ -32,16 +33,14 @@ public class RegisterProvider implements BeanPostProcessor {
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) {
         Class<?> beanClass = bean.getClass();
+        String hostAddress = NetUtil.getIpAddress();
+        // 如果是根据协议获取暴露的端口
+        String port = Objects.equals(protocol, ProtocolConstants.NETTY) ? nettyPort : httpPort;
         if (beanClass.isAnnotationPresent(FrankDubbo.class)) {
             Class<?>[] interfaces = beanClass.getInterfaces();
             Arrays.stream(interfaces).forEach(i -> {
-
                 LocalProviderCache.register(i.getName(), beanClass, beanName, beanClass.getAnnotation(FrankDubbo.class));
-                String hostAddress = NetUtil.getIpAddress();
-                NetUtil.getIpAddress();
-
                 try {
-                    String port = Objects.equals(protocol, ProtocolConstants.NETTY) ? nettyPort : httpPort;
                     providerZookeeperRegistry.register(i.getName(), new Url(hostAddress, port));
                 } catch (Exception e) {
                     throw new RuntimeException(e);

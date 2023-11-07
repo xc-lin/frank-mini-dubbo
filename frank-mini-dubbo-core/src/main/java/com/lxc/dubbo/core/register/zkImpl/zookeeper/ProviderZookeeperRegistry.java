@@ -19,13 +19,12 @@ public class ProviderZookeeperRegistry extends AbstractZookeeperRegistry {
 
     @Override
     public void register(String interfaceName, Url url) {
-        if (Objects.equals(protocol, ProtocolConstants.NETTY)) {
-            NettyServer.startServer(Integer.parseInt(url.getPort()));
-        }
         try {
             if (client.checkExists().forPath("/" + getPrefix() + "/" + interfaceName) == null) {
+                // 创建永久节点
                 client.create().creatingParentsIfNeeded().withMode(CreateMode.PERSISTENT).forPath("/" + getPrefix() + "/" + interfaceName);
             }
+            // 创建临时节点，当机器下线，zookeeper则自动删除当前节点
             String nodePath = client.create().withMode(CreateMode.EPHEMERAL).forPath(String.format("/" + getPrefix() + "/%s/%s", interfaceName, JSON.toJSONString(url)));
             LogUtil.info("frank mini dubbo register service: {} on dubbo node: {}", interfaceName, nodePath);
         } catch (Exception e) {

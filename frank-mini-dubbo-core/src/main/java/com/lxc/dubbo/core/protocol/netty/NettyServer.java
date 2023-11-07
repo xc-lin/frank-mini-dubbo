@@ -1,5 +1,6 @@
 package com.lxc.dubbo.core.protocol.netty;
 
+import com.lxc.dubbo.core.domain.enums.ProtocolConstants;
 import com.lxc.dubbo.core.util.LogUtil;
 import com.lxc.dubbo.core.util.NetUtil;
 import io.netty.bootstrap.ServerBootstrap;
@@ -12,10 +13,20 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
 import io.netty.handler.logging.LoggingHandler;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.context.ApplicationListener;
+import org.springframework.context.event.ContextRefreshedEvent;
+import org.springframework.stereotype.Component;
 
 
 @Slf4j
-public class NettyServer {
+@Component
+@ConditionalOnProperty(value = "protocol", havingValue = ProtocolConstants.NETTY)
+public class NettyServer implements ApplicationListener<ContextRefreshedEvent> {
+
+    @Value("${frank.dubbo.netty.port}")
+    private String nettyPort;
 
     public static void startServer(int port) {
         NioEventLoopGroup bossGroup = new NioEventLoopGroup(1);
@@ -28,11 +39,15 @@ public class NettyServer {
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
                             socketChannel.pipeline()
-                                    .addLast(new LoggingHandler())
-                                    .addLast(new LengthFieldBasedFrameDecoder(100000000, 12, 4, 0, 0))
+                                    // 解决粘包问题
+                                    .addLast(new LengthFieldBasedFrameDecoder(Integer.MAX_VALUE, 12, 4, 0, 0))
+                                    // 解析自己的协议
                                     .addLast(new FrankMiniDubboCodec())
+                                    // Invocation序列化/反序列化
                                     .addLast(new FrankMiniDubboInvocationHandler())
+                                    // Response序列化/反序列化
                                     .addLast(new FrankMiniDubboResponseSerializeHandler())
+                                    // 反射调用
                                     .addLast(new NettyServerHandler());
                         }
                     });
@@ -43,5 +58,11 @@ public class NettyServer {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @Override
+    public void onApplicationEvent(ContextRefreshedEvent event) {
+        NettyServer.startServer(Integer.parseInt(nettyPort));
+        LogUtil.info("NettyServer已启动!");
     }
 }
