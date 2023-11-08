@@ -9,9 +9,15 @@ import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ConcurrentHashMap;
 
-@Slf4j
 public class DefaultFuture extends CompletableFuture<RequestResult> {
+
+    /**
+     * 通道
+     */
     private final Channel channel;
+    /**
+     * 请求uuid 以及CompletableFuture对应存储
+     */
     private static Map<String, DefaultFuture> FUTURES = new ConcurrentHashMap<>();
 
     public DefaultFuture(Channel channel, Invocation invocation, int timeout) {

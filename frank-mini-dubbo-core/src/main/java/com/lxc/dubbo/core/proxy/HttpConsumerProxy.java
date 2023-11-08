@@ -37,8 +37,11 @@ public class HttpConsumerProxy extends AbstractConsumerProxy {
 
     @Override
     public Object rpcExecute(Method method, Invocation invocation, Url url, FrankDubboReference frankDubboReference) {
+        // 获取注解上的超时时间
         long timeoutMillis = frankDubboReference.timeUnit().toMillis(frankDubboReference.timeout());
+        // 发送http请求
         String result = HttpUtil.post(url.getAddressAndPort() + UrlConstant.RPC_URL, JSON.toJSONString(invocation), (int) timeoutMillis);
+        // 解析反序列化结果
         RequestResult requestResult = JSON.parseObject(result, RequestResult.class);
         if (requestResult.isSuccess()) {
             if (method.getReturnType() == String.class) {

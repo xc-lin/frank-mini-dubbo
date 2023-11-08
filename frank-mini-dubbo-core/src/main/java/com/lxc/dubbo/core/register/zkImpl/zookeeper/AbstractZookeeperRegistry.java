@@ -53,23 +53,6 @@ public abstract class AbstractZookeeperRegistry implements Registry {
         }
     }
 
-    @Override
-    public void getUrls(String interfaceName) {
-        List<String> urlJsons = null;
-        try {
-            urlJsons = client.getChildren().forPath("/" + getPrefix() + "/" + interfaceName);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        for (String urlJson : urlJsons) {
-            Url url = JSON.parseObject(urlJson, Url.class);
-            LocalConsumerCache.set(interfaceName, url);
-            if (Objects.equals(protocol, ProtocolConstants.NETTY)) {
-                LocalConsumerCache.set(url, new NettyClient(url));
-            }
-        }
-        LogUtil.info("接口: {}, url：{}存入本地缓存", interfaceName, urlJsons);
-    }
 
     @Override
     public void watchInterface(String interfaceName) throws Exception {

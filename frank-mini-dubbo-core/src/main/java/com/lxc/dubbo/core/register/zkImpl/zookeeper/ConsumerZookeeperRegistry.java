@@ -8,6 +8,11 @@ public class ConsumerZookeeperRegistry extends AbstractZookeeperRegistry {
 
 
     @Override
+    public void getUrls(String interfaceName) throws Exception {
+        return;
+    }
+
+    @Override
     public String getPrefix() {
         return RegistryConstant.CONSUMER + "/" + protocol;
     }

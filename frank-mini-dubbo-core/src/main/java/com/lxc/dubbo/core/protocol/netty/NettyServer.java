@@ -62,6 +62,7 @@ public class NettyServer implements ApplicationListener<ContextRefreshedEvent> {
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
+        // 启动netty服务器
         NettyServer.startServer(Integer.parseInt(nettyPort));
         LogUtil.info("NettyServer已启动!");
     }
